@@ -1,7 +1,7 @@
-using System;
+using TMPro;
 using UnityEngine;
 
-public class Blinky : MonoBehaviour
+public class Pinky : MonoBehaviour
 {
     [SerializeField] private float movingSpeed = 10.0f;
     [SerializeField] private LayerMask wallLayer;
@@ -51,11 +51,11 @@ public class Blinky : MonoBehaviour
                 if (CanMoveInDirection(dir))
                 {
                     _TestPosition = _rb.position + dir;
-                    if (_DistanceToCell >= Vector2.Distance(_TestPosition, pacman.position))
+                    if (_DistanceToCell >= Vector2.Distance(_TestPosition, (Vector2)pacman.position + Player.Instance._currentDirection * 4))
                     {
                         _futureDirection = dir;
-                        _DistanceToCell = Vector2.Distance(_TestPosition, pacman.position);
-                        Debug.DrawLine(_TestPosition, (Vector2)pacman.position, new Color(0, 1, 0, 0.2f), 0.3f);
+                        _DistanceToCell = Vector2.Distance(_TestPosition, (Vector2)pacman.position + Player.Instance._currentDirection * 4);
+                        Debug.DrawLine(_TestPosition, (Vector2)pacman.position + Player.Instance._currentDirection * 4, new Color(0, 0, 1, 0.2f), 0.3f);
                     }
                 }
             }

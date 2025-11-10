@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float distanceToStop = 0.1f;
 
     private Vector2 _inputVector;
-    private Vector2 _currentDirection = Vector2.right;
+    public Vector2 _currentDirection = Vector2.right;
     private Vector2 _nextDirection;
     private Rigidbody2D _rb;
 
