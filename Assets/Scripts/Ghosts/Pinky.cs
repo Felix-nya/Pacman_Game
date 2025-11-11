@@ -55,7 +55,7 @@ public class Pinky : MonoBehaviour
                     {
                         _futureDirection = dir;
                         _DistanceToCell = Vector2.Distance(_TestPosition, (Vector2)pacman.position + Player.Instance._currentDirection * 4);
-                        Debug.DrawLine(_TestPosition, (Vector2)pacman.position + Player.Instance._currentDirection * 4, new Color(0, 0, 1, 0.2f), 0.3f);
+                        //Debug.DrawLine(_TestPosition, (Vector2)pacman.position + Player.Instance._currentDirection * 4, new Color(1, 0, 1, 0.2f), 0.3f);
                     }
                 }
             }

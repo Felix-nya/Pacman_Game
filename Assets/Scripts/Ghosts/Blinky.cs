@@ -55,7 +55,7 @@ public class Blinky : MonoBehaviour
                     {
                         _futureDirection = dir;
                         _DistanceToCell = Vector2.Distance(_TestPosition, pacman.position);
-                        Debug.DrawLine(_TestPosition, (Vector2)pacman.position, new Color(0, 1, 0, 0.2f), 0.3f);
+                        //Debug.DrawLine(_TestPosition, (Vector2)pacman.position, new Color(1, 0, 0, 0.2f), 0.3f);
                     }
                 }
             }
