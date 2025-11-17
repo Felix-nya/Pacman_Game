@@ -11,9 +11,12 @@ public class Blinky : MonoBehaviour
     [SerializeField] private Collider2D specialGrid3;
     [SerializeField] private Collider2D specialGrid4;
     [SerializeField] private Transform pacman;
-    [SerializeField] private Transform cellOfScary_Blinky;
+    [SerializeField] private Transform cellOfScary;
+    [SerializeField] private Transform blinky;
+    [SerializeField] private Transform ghostTransform;
     [SerializeField] private float checkOffSet = 0.425f;
     [SerializeField] private float distanceToStop = 0.74f;
+    [SerializeField] private Ghosts ghost;
 
     private Vector2 _currentDirection = Vector2.right;
     private Vector2 _futureDirection = Vector2.zero;
@@ -34,7 +37,13 @@ public class Blinky : MonoBehaviour
         Frightened,
         Death
     }
-
+    private enum Ghosts
+    {
+        Blinky,
+        Clyde,
+        Inky,
+        Pinky
+    }
     private void Awake()
     {
         _currentState = startingState;
@@ -43,7 +52,18 @@ public class Blinky : MonoBehaviour
     private void FixedUpdate()
     {
         StateHandler();
+        if (GhostChasePacman())
+        {
+#if UNITY_EDITOR                                                                  
+            UnityEditor.EditorApplication.ExitPlaymode();
+#endif
+
+            Application.Quit();
+
+            Debug.Log("Exit");
+        }
     }
+
     private void StateHandler()
     {
         switch (_currentState)
@@ -74,7 +94,7 @@ public class Blinky : MonoBehaviour
                 }
                 break;
             case State.Frightened:
-                
+
                 break;
             case State.House:
                 break;
@@ -96,23 +116,59 @@ public class Blinky : MonoBehaviour
     {
         if (_ChangeDirection || _currentDirection == Vector2.down)
         {
-            _DistanceToCell = 10000f;
-            foreach (Vector2 dir in _dirs)
+            if (ghost == Ghosts.Clyde)
             {
-                if (dir == -_currentDirection) continue;
-                if (CanMoveInDirection(dir))
+                _DistanceToCell = 10000f;
+                foreach (Vector2 dir in _dirs)
                 {
-                    _TestPosition = _rb.position + dir;
-                    if (_DistanceToCell >= Vector2.Distance(_TestPosition, pacman.position))
+                    if (dir == -_currentDirection) continue;
+                    if (CanMoveInDirection(dir))
                     {
-                        _futureDirection = dir;
-                        _DistanceToCell = Vector2.Distance(_TestPosition, pacman.position);
-                        Debug.DrawLine(_TestPosition, (Vector2)pacman.position, new Color(1, 0, 0, 0.2f), 0.3f);
+                        _TestPosition = _rb.position + dir;
+                        if (Vector2.Distance(_TestPosition, pacman.position) > 8f)
+                        {
+                            if (_DistanceToCell >= Vector2.Distance(_TestPosition, pacman.position))
+                            {
+                                _futureDirection = dir;
+                                _DistanceToCell = Vector2.Distance(_TestPosition, pacman.position);
+                                //Debug.DrawLine(_TestPosition, (Vector2)pacman.position, new Color(1, 0.5f, 0, 0.2f), 0.3f);
+                            }
+                        }
+                        else
+                        {
+                            if (_DistanceToCell >= Vector2.Distance(_TestPosition, cellOfScary.position))
+                            {
+                                _futureDirection = dir;
+                                _DistanceToCell = Vector2.Distance(_TestPosition, cellOfScary.position);
+                                //Debug.DrawLine(_TestPosition, (Vector2)cellOfScary.position, new Color(1, 0.5f, 0, 0.2f), 0.3f);
+                            }
+                        }
                     }
                 }
+                _currentDirection = _futureDirection;
+                _rb.linearVelocity = _currentDirection * movingSpeed;
             }
-            _currentDirection = _futureDirection;
-            _rb.linearVelocity = _currentDirection * movingSpeed;
+            else
+            {
+                _DistanceToCell = 10000f;
+                foreach (Vector2 dir in _dirs)
+                {
+                    if (dir == -_currentDirection) continue;
+                    if (CanMoveInDirection(dir))
+                    {
+                        Vector2 _cellPosition = (ghost == Ghosts.Blinky) ? (Vector2)pacman.position : (ghost == Ghosts.Pinky) ? (Vector2)pacman.position + Player.Instance._currentDirection * 4 : (ghost == Ghosts.Inky) ? 2 * ((Vector2)pacman.position + Player.Instance._currentDirection * 2) - (Vector2)blinky.position : Vector2.zero;
+                        _TestPosition = _rb.position + dir;
+                        if (_DistanceToCell >= Vector2.Distance(_TestPosition, _cellPosition))
+                        {
+                            _futureDirection = dir;
+                            _DistanceToCell = Vector2.Distance(_TestPosition, _cellPosition);
+                            //Debug.DrawLine(_TestPosition, _cellPosition, new Color(1, 0, 0, 0.2f), 0.3f);
+                        }
+                    }
+                }
+                _currentDirection = _futureDirection;
+                _rb.linearVelocity = _currentDirection * movingSpeed;
+            }
         }
         else _rb.linearVelocity = _currentDirection * movingSpeed;
     }
@@ -127,11 +183,11 @@ public class Blinky : MonoBehaviour
                 if (CanMoveInDirection(dir))
                 {
                     _TestPosition = _rb.position + dir;
-                    if (_DistanceToCell >= Vector2.Distance(_TestPosition, cellOfScary_Blinky.position))
+                    if (_DistanceToCell >= Vector2.Distance(_TestPosition, cellOfScary.position))
                     {
                         _futureDirection = dir;
-                        _DistanceToCell = Vector2.Distance(_TestPosition, cellOfScary_Blinky.position);
-                        Debug.DrawLine(_TestPosition, (Vector2)cellOfScary_Blinky.position, new Color(1, 0, 0, 0.2f), 0.3f);
+                        _DistanceToCell = Vector2.Distance(_TestPosition, cellOfScary.position);
+                        //Debug.DrawLine(_TestPosition, (Vector2)cellOfScary.position, new Color(1, 0, 0, 0.2f), 0.3f);
                     }
                 }
             }
@@ -139,6 +195,17 @@ public class Blinky : MonoBehaviour
             _rb.linearVelocity = _currentDirection * movingSpeed;
         }
         else _rb.linearVelocity = _currentDirection * movingSpeed;
+    }
+    private bool GhostChasePacman()
+    {
+        Vector2 _pacmanCell;
+        Vector2 _ghostCell;
+        _pacmanCell.x = Mathf.Round(pacman.position.x * 2f) / 2f;
+        _pacmanCell.y = Mathf.Round(pacman.position.y);
+        _ghostCell.x = Mathf.Round(ghostTransform.position.x * 2f) / 2f;
+        _ghostCell.y = Mathf.Round(ghostTransform.position.y);
+        if (_pacmanCell == _ghostCell) return true;
+        return false;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

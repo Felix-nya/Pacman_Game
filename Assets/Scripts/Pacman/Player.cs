@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float checkOffSet = 0.3f;
     [SerializeField] private float distanceToStop = 0.1f;
 
+    public int _countOfCoins = 0;
     private Vector2 _inputVector;
     public Vector2 _currentDirection = Vector2.right;
     private Vector2 _nextDirection;
