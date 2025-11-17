@@ -19896,7 +19896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Blinky
   startingState: 1
-  movingSpeed: 5
+  movingSpeed: 6
   wallLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -24517,7 +24517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Blinky
   startingState: 1
-  movingSpeed: 5
+  movingSpeed: 6
   wallLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -28471,7 +28471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Blinky
   startingState: 1
-  movingSpeed: 5
+  movingSpeed: 6
   wallLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -29490,7 +29490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Blinky
   startingState: 1
-  movingSpeed: 5
+  movingSpeed: 6
   wallLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -29913,7 +29913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a667ea13ea52bd44b8002b554606ec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
-  movingSpeed: 5
+  movingSpeed: 6
   wallLayer:
     serializedVersion: 2
     m_Bits: 256
