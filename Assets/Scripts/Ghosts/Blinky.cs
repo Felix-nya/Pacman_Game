@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class Blinky : MonoBehaviour
@@ -17,18 +18,24 @@ public class Blinky : MonoBehaviour
     [SerializeField] private float checkOffSet = 0.425f;
     [SerializeField] private float distanceToStop = 0.74f;
     [SerializeField] private Ghosts ghost;
+    [SerializeField] private int energyTime = 10;
 
     private Vector2 _currentDirection = Vector2.right;
     private Vector2 _futureDirection = Vector2.zero;
     private readonly Vector2[] _dirs = { Vector2.right, Vector2.down, Vector2.left, Vector2.up };
     private State _currentState;
     private Rigidbody2D _rb;
+    private SpriteRenderer _sr;
+    private Color _color;
     private float _DistanceToCell = 10000f;
     private Vector2 _TestPosition = Vector2.zero;
     private bool _ChangeDirection = true;
     private int _Waves = 1;
     private float _ChasingTimer = 0f;
     private float _ScatterTimer = 0f;
+    private float _FrightenedTimer = 0f;
+    private bool _CanEatPacman = true;
+
     private enum State
     {
         House,
@@ -48,11 +55,17 @@ public class Blinky : MonoBehaviour
     {
         _currentState = startingState;
         _rb = GetComponent<Rigidbody2D>();
+        _sr = GetComponent<SpriteRenderer>();
+        _color = _sr.color;
+    }
+    private void Start()
+    {
+        EnergyCollector.OnEatingEnergy += collector_OnEatingEnergy;
     }
     private void FixedUpdate()
     {
         StateHandler();
-        if (GhostChasePacman())
+        if (GhostChasePacman() && _CanEatPacman)
         {
 #if UNITY_EDITOR                                                                  
             UnityEditor.EditorApplication.ExitPlaymode();
@@ -63,7 +76,6 @@ public class Blinky : MonoBehaviour
             Debug.Log("Exit");
         }
     }
-
     private void StateHandler()
     {
         switch (_currentState)
@@ -86,15 +98,30 @@ public class Blinky : MonoBehaviour
                 {
                     _ScatterTimer = 0f;
                     _currentState = State.Chasing;
+                    _currentDirection = -_currentDirection;
                 }
                 if (_Waves < 5 && _ScatterTimer >= 5f)
                 {
                     _ScatterTimer = 0f;
                     _currentState = State.Chasing;
+                    _currentDirection = -_currentDirection;
                 }
                 break;
             case State.Frightened:
-
+                GhostFrightened();
+                if (_FrightenedTimer == 0f)
+                {
+                    _CanEatPacman = false;
+                    _sr.color = Color.blueViolet;
+                }
+                _FrightenedTimer += Time.deltaTime;
+                if (_FrightenedTimer >= energyTime)
+                {
+                    _FrightenedTimer = 0f;
+                    _currentState = State.Chasing;
+                    _CanEatPacman = true;
+                    _sr.color = _color;
+                }
                 break;
             case State.House:
                 break;
@@ -196,6 +223,32 @@ public class Blinky : MonoBehaviour
         }
         else _rb.linearVelocity = _currentDirection * movingSpeed;
     }
+    private void GhostFrightened()
+    {
+        _futureDirection = Vector2.zero;
+        foreach (Vector2 dir in _dirs)
+        {
+            if (dir == -_currentDirection) continue;
+            if (CanMoveInDirection(dir))
+            {
+                if (_futureDirection == Vector2.zero)
+                {
+                    _futureDirection = dir;
+                }
+                else
+                {
+                    if (UnityEngine.Random.Range(1, 3) == 1)
+                    {
+                        _futureDirection = dir;
+                    }
+                }
+
+            }
+        }
+        _currentDirection = _futureDirection;
+        _rb.linearVelocity = _currentDirection * movingSpeed;
+
+    }
     private bool GhostChasePacman()
     {
         Vector2 _pacmanCell;
@@ -214,5 +267,14 @@ public class Blinky : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision == specialGrid1 || collision == specialGrid2 || collision == specialGrid3 || collision == specialGrid4) _ChangeDirection = true;
+    }
+    private void collector_OnEatingEnergy(object sender, EventArgs e)
+    {
+        _currentState = State.Frightened;
+        _FrightenedTimer = 0f;
+    }
+    private void OnDestroy()
+    {
+        EnergyCollector.OnEatingEnergy -= collector_OnEatingEnergy;
     }
 }
