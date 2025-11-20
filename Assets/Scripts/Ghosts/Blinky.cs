@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Blinky : MonoBehaviour
@@ -27,8 +28,6 @@ public class Blinky : MonoBehaviour
     private Rigidbody2D _rb;
     private SpriteRenderer _sr;
     private Color _color;
-    private float _DistanceToCell = 10000f;
-    private Vector2 _TestPosition = Vector2.zero;
     private bool _ChangeDirection = true;
     private int _Waves = 1;
     private float _ChasingTimer = 0f;
@@ -130,120 +129,113 @@ public class Blinky : MonoBehaviour
                 break;
         }
     }
-    private bool CanMoveInDirection(Vector2 _nextDirection)
+    private bool CanMoveInDirection(Vector2 _nextDirection, Vector2 _currentPosition)
     {
         if (_nextDirection == Vector2.zero) return false;
 
         float rayDistance = distanceToStop;
-        RaycastHit2D hit = Physics2D.Raycast(_rb.position - _currentDirection * checkOffSet, _nextDirection, rayDistance, wallLayer);
-        RaycastHit2D hit2 = Physics2D.Raycast(_rb.position + _currentDirection * checkOffSet, _nextDirection, rayDistance, wallLayer);
+        RaycastHit2D hit = Physics2D.Raycast(_currentPosition - _currentDirection * checkOffSet, _nextDirection, rayDistance, wallLayer);
+        RaycastHit2D hit2 = Physics2D.Raycast(_currentPosition + _currentDirection * checkOffSet, _nextDirection, rayDistance, wallLayer);
         return (hit.collider == null && hit2.collider == null);
     }
     private void GhostChasing()
     {
-        if (_ChangeDirection || _currentDirection == Vector2.down)
+        if (!_ChangeDirection && _currentDirection != Vector2.down)
         {
-            if (ghost == Ghosts.Clyde)
+            _rb.linearVelocity = _currentDirection * movingSpeed;
+            return;
+        }
+
+        Vector2 targetPosition = GetTargetPosition();
+        Vector2 bestDirection = Vector2.zero;
+        float bestDistance = float.MaxValue;
+
+        foreach (Vector2 dir in _dirs)
+        {
+            if (dir == -_currentDirection) continue;
+
+            if (CanMoveInDirection(dir, _rb.position))
             {
-                _DistanceToCell = 10000f;
-                foreach (Vector2 dir in _dirs)
+                Vector2 testPosition = _rb.position + dir;
+                float distance = Vector2.Distance(testPosition, targetPosition);
+
+                Debug.DrawLine(testPosition, targetPosition, new Color(1, 0, 0, 0.2f), 0.3f);
+
+                if (distance < bestDistance)
                 {
-                    if (dir == -_currentDirection) continue;
-                    if (CanMoveInDirection(dir))
-                    {
-                        _TestPosition = _rb.position + dir;
-                        if (Vector2.Distance(_TestPosition, pacman.position) > 8f)
-                        {
-                            if (_DistanceToCell >= Vector2.Distance(_TestPosition, pacman.position))
-                            {
-                                _futureDirection = dir;
-                                _DistanceToCell = Vector2.Distance(_TestPosition, pacman.position);
-                                //Debug.DrawLine(_TestPosition, (Vector2)pacman.position, new Color(1, 0.5f, 0, 0.2f), 0.3f);
-                            }
-                        }
-                        else
-                        {
-                            if (_DistanceToCell >= Vector2.Distance(_TestPosition, cellOfScary.position))
-                            {
-                                _futureDirection = dir;
-                                _DistanceToCell = Vector2.Distance(_TestPosition, cellOfScary.position);
-                                //Debug.DrawLine(_TestPosition, (Vector2)cellOfScary.position, new Color(1, 0.5f, 0, 0.2f), 0.3f);
-                            }
-                        }
-                    }
+                    bestDistance = distance;
+                    bestDirection = dir;
                 }
-                _currentDirection = _futureDirection;
-                _rb.linearVelocity = _currentDirection * movingSpeed;
-            }
-            else
-            {
-                _DistanceToCell = 10000f;
-                foreach (Vector2 dir in _dirs)
-                {
-                    if (dir == -_currentDirection) continue;
-                    if (CanMoveInDirection(dir))
-                    {
-                        Vector2 _cellPosition = (ghost == Ghosts.Blinky) ? (Vector2)pacman.position : (ghost == Ghosts.Pinky) ? (Vector2)pacman.position + Player.Instance._currentDirection * 4 : (ghost == Ghosts.Inky) ? 2 * ((Vector2)pacman.position + Player.Instance._currentDirection * 2) - (Vector2)blinky.position : Vector2.zero;
-                        _TestPosition = _rb.position + dir;
-                        if (_DistanceToCell >= Vector2.Distance(_TestPosition, _cellPosition))
-                        {
-                            _futureDirection = dir;
-                            _DistanceToCell = Vector2.Distance(_TestPosition, _cellPosition);
-                            //Debug.DrawLine(_TestPosition, _cellPosition, new Color(1, 0, 0, 0.2f), 0.3f);
-                        }
-                    }
-                }
-                _currentDirection = _futureDirection;
-                _rb.linearVelocity = _currentDirection * movingSpeed;
             }
         }
-        else _rb.linearVelocity = _currentDirection * movingSpeed;
-    }
+
+        if (bestDirection == Vector2.zero)
+        {
+            bestDirection = _currentDirection;
+        }
+
+        _currentDirection = bestDirection;
+        _rb.linearVelocity = _currentDirection * movingSpeed;
+}
     private void GhostScatter()
     {
-        if (_ChangeDirection || _currentDirection == Vector2.down)
+        if (!_ChangeDirection && _currentDirection != Vector2.down)
         {
-            _DistanceToCell = 10000f;
-            foreach (Vector2 dir in _dirs)
+            _rb.linearVelocity = _currentDirection * movingSpeed;
+            return;
+        }
+
+        Vector2 bestDirection = Vector2.zero;
+        float bestDistance = float.MaxValue;
+
+        foreach (Vector2 dir in _dirs)
+        {
+            if (dir == -_currentDirection) continue;
+
+            if (CanMoveInDirection(dir, _rb.position))
             {
-                if (dir == -_currentDirection) continue;
-                if (CanMoveInDirection(dir))
+                Vector2 testPosition = _rb.position + dir;
+                float distance = Vector2.Distance(testPosition, cellOfScary.position);
+
+                Debug.DrawLine(testPosition, cellOfScary.position, new Color(1, 0, 0, 0.2f), 0.3f);
+
+                if (distance < bestDistance)
                 {
-                    _TestPosition = _rb.position + dir;
-                    if (_DistanceToCell >= Vector2.Distance(_TestPosition, cellOfScary.position))
-                    {
-                        _futureDirection = dir;
-                        _DistanceToCell = Vector2.Distance(_TestPosition, cellOfScary.position);
-                        //Debug.DrawLine(_TestPosition, (Vector2)cellOfScary.position, new Color(1, 0, 0, 0.2f), 0.3f);
-                    }
+                    bestDistance = distance;
+                    bestDirection = dir;
                 }
             }
-            _currentDirection = _futureDirection;
-            _rb.linearVelocity = _currentDirection * movingSpeed;
         }
-        else _rb.linearVelocity = _currentDirection * movingSpeed;
+
+        if (bestDirection == Vector2.zero)
+        {
+            bestDirection = _currentDirection;
+        }
+
+        _currentDirection = bestDirection;
+        _rb.linearVelocity = _currentDirection * movingSpeed;
     }
     private void GhostFrightened()
     {
         _futureDirection = Vector2.zero;
+        List<Vector2> validDirections = new();
+
         foreach (Vector2 dir in _dirs)
         {
             if (dir == -_currentDirection) continue;
-            if (CanMoveInDirection(dir))
+            if (CanMoveInDirection(dir, _rb.position))
             {
-                if (_futureDirection == Vector2.zero)
-                {
-                    _futureDirection = dir;
-                }
-                else
-                {
-                    if (UnityEngine.Random.Range(1, 3) == 1)
-                    {
-                        _futureDirection = dir;
-                    }
-                }
-
+                validDirections.Add(dir);
             }
+        }
+
+        if (validDirections.Count > 0)
+        {
+            _futureDirection = validDirections[UnityEngine.Random.Range(0, validDirections.Count)];
+        }
+        else
+        {
+            _futureDirection = _currentDirection;
         }
         _currentDirection = _futureDirection;
         _rb.linearVelocity = _currentDirection * movingSpeed;
@@ -267,6 +259,28 @@ public class Blinky : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision == specialGrid1 || collision == specialGrid2 || collision == specialGrid3 || collision == specialGrid4) _ChangeDirection = true;
+    }
+    private Vector2 GetTargetPosition()
+    {
+        switch (ghost)
+        {
+            case Ghosts.Blinky:
+                return pacman.position;
+
+            case Ghosts.Pinky:
+                return (Vector2)pacman.position + Player.Instance._currentDirection * 4;
+
+            case Ghosts.Inky:
+                Vector2 pacmanAhead = (Vector2)pacman.position + Player.Instance._currentDirection * 2;
+                return 2 * pacmanAhead - (Vector2)blinky.position;
+
+            case Ghosts.Clyde:
+                float distanceToPacman = Vector2.Distance(_rb.position, pacman.position);
+                return distanceToPacman > 8f ? pacman.position : cellOfScary.position;
+
+            default:
+                return pacman.position;
+        }
     }
     private void collector_OnEatingEnergy(object sender, EventArgs e)
     {
