@@ -8,6 +8,7 @@ public class Blinky : MonoBehaviour
     [SerializeField] private State startingState;
     [SerializeField] private float movingSpeed = 10.0f;
     [SerializeField] private LayerMask wallLayer;
+    [SerializeField] private LayerMask wallWithHouseLayer;
     [SerializeField] private Collider2D specialGrid1;
     [SerializeField] private Collider2D specialGrid2;
     [SerializeField] private Collider2D specialGrid3;
@@ -20,11 +21,13 @@ public class Blinky : MonoBehaviour
     [SerializeField] private float distanceToStop = 0.74f;
     [SerializeField] private Ghosts ghost;
     [SerializeField] private int energyTime = 10;
+    [SerializeField] private int blockSomeSwithingDirs = 5;
 
     private Vector2 _currentDirection = Vector2.right;
     private Vector2 _futureDirection = Vector2.zero;
     private readonly Vector2[] _dirs = { Vector2.right, Vector2.down, Vector2.left, Vector2.up };
     private State _currentState;
+    private CircleCollider2D _cd;
     private Rigidbody2D _rb;
     private SpriteRenderer _sr;
     private Color _color;
@@ -33,6 +36,7 @@ public class Blinky : MonoBehaviour
     private float _ChasingTimer = 0f;
     private float _ScatterTimer = 0f;
     private float _FrightenedTimer = 0f;
+    private int _WaitForChoose = 0;
     private bool _CanEatPacman = true;
 
     private enum State
@@ -55,24 +59,32 @@ public class Blinky : MonoBehaviour
         _currentState = startingState;
         _rb = GetComponent<Rigidbody2D>();
         _sr = GetComponent<SpriteRenderer>();
+        _cd = GetComponent<CircleCollider2D>();
         _color = _sr.color;
     }
     private void Start()
     {
-        EnergyCollector.OnEatingEnergy += collector_OnEatingEnergy;
+        EnergyCollector.OnEatingEnergy += Ñollector_OnEatingEnergy;
     }
     private void FixedUpdate()
     {
         StateHandler();
-        if (GhostChasePacman() && _CanEatPacman)
+        if (GhostChasePacman())
         {
-#if UNITY_EDITOR                                                                  
-            UnityEditor.EditorApplication.ExitPlaymode();
+            if (_CanEatPacman)
+            {
+#if UNITY_EDITOR
+                UnityEditor.EditorApplication.ExitPlaymode();
 #endif
 
-            Application.Quit();
+                Application.Quit();
 
-            Debug.Log("Exit");
+                Debug.Log("Exit");
+            }
+            else
+            {
+                _currentState = State.Death;
+            }
         }
     }
     private void StateHandler()
@@ -122,24 +134,34 @@ public class Blinky : MonoBehaviour
                     _sr.color = _color;
                 }
                 break;
-            case State.House:
+            case State.Death:
+                if (_rb.position.x > -0.5f && _rb.position.y > 3.7f && _rb.position.x < 0.5f && _rb.position.y < 4.1f) _cd.isTrigger = true;
+                MovingToHouse();
                 break;
             default:
-            case State.Death:
+            case State.House:
+                _cd.isTrigger = false;
                 break;
         }
     }
-    private bool CanMoveInDirection(Vector2 _nextDirection, Vector2 _currentPosition)
+    private bool CanMoveInDirection(Vector2 _nextDirection, Vector2 _currentPosition, LayerMask _wallLayer)
     {
         if (_nextDirection == Vector2.zero) return false;
 
         float rayDistance = distanceToStop;
-        RaycastHit2D hit = Physics2D.Raycast(_currentPosition - _currentDirection * checkOffSet, _nextDirection, rayDistance, wallLayer);
-        RaycastHit2D hit2 = Physics2D.Raycast(_currentPosition + _currentDirection * checkOffSet, _nextDirection, rayDistance, wallLayer);
+        RaycastHit2D hit = Physics2D.Raycast(_currentPosition - _currentDirection * checkOffSet, _nextDirection, rayDistance, _wallLayer);
+        RaycastHit2D hit2 = Physics2D.Raycast(_currentPosition + _currentDirection * checkOffSet, _nextDirection, rayDistance, _wallLayer);
         return (hit.collider == null && hit2.collider == null);
     }
     private void GhostChasing()
     {
+        if (_WaitForChoose > 0)
+        {
+            _rb.linearVelocity = _currentDirection * movingSpeed;
+            _WaitForChoose--;
+            return;
+        }
+
         if (!_ChangeDirection && _currentDirection != Vector2.down)
         {
             _rb.linearVelocity = _currentDirection * movingSpeed;
@@ -149,13 +171,15 @@ public class Blinky : MonoBehaviour
         Vector2 targetPosition = GetTargetPosition();
         Vector2 bestDirection = Vector2.zero;
         float bestDistance = float.MaxValue;
+        int countOfDirs = 0;
 
         foreach (Vector2 dir in _dirs)
         {
             if (dir == -_currentDirection) continue;
 
-            if (CanMoveInDirection(dir, _rb.position))
+            if (CanMoveInDirection(dir, _rb.position, wallLayer))
             {
+                countOfDirs++;
                 Vector2 testPosition = _rb.position + dir;
                 float distance = Vector2.Distance(testPosition, targetPosition);
 
@@ -169,6 +193,8 @@ public class Blinky : MonoBehaviour
             }
         }
 
+        if (countOfDirs > 1) _WaitForChoose = blockSomeSwithingDirs; 
+
         if (bestDirection == Vector2.zero)
         {
             bestDirection = _currentDirection;
@@ -179,6 +205,13 @@ public class Blinky : MonoBehaviour
 }
     private void GhostScatter()
     {
+        if (_WaitForChoose > 0)
+        {
+            _rb.linearVelocity = _currentDirection * movingSpeed;
+            _WaitForChoose--;
+            return;
+        }
+
         if (!_ChangeDirection && _currentDirection != Vector2.down)
         {
             _rb.linearVelocity = _currentDirection * movingSpeed;
@@ -187,17 +220,93 @@ public class Blinky : MonoBehaviour
 
         Vector2 bestDirection = Vector2.zero;
         float bestDistance = float.MaxValue;
+        int countOfDirs = 0;
 
         foreach (Vector2 dir in _dirs)
         {
             if (dir == -_currentDirection) continue;
 
-            if (CanMoveInDirection(dir, _rb.position))
+            if (CanMoveInDirection(dir, _rb.position, wallLayer))
             {
+                countOfDirs++;
                 Vector2 testPosition = _rb.position + dir;
                 float distance = Vector2.Distance(testPosition, cellOfScary.position);
 
                 Debug.DrawLine(testPosition, cellOfScary.position, new Color(1, 0, 0, 0.2f), 0.3f);
+
+                if (distance < bestDistance)
+                {
+                    bestDistance = distance;
+                    bestDirection = dir;
+                }
+            }
+        }
+
+        if (countOfDirs > 1) _WaitForChoose = blockSomeSwithingDirs;
+
+        if (bestDirection == Vector2.zero)
+        {
+            bestDirection = _currentDirection;
+        }
+
+        _currentDirection = bestDirection;
+        _rb.linearVelocity = _currentDirection * movingSpeed;
+    }
+    private void GhostFrightened()
+    {
+        if (_WaitForChoose > 0)
+        {
+            _rb.linearVelocity = _currentDirection * movingSpeed;
+            _WaitForChoose--;
+            return;
+        }
+
+        _futureDirection = Vector2.zero;
+        List<Vector2> validDirections = new();
+
+        foreach (Vector2 dir in _dirs)
+        {
+            if (dir == -_currentDirection) continue;
+            if (CanMoveInDirection(dir, _rb.position, wallLayer))
+            {
+                validDirections.Add(dir);
+            }
+        }
+
+        if (validDirections.Count > 1)
+        {
+            _WaitForChoose = blockSomeSwithingDirs;
+        }
+
+        if (validDirections.Count > 0)
+        {
+            _futureDirection = validDirections[UnityEngine.Random.Range(0, validDirections.Count)];
+        }
+        else
+        {
+            _futureDirection = _currentDirection;
+        }
+        _currentDirection = _futureDirection;
+        _rb.linearVelocity = _currentDirection * movingSpeed;
+
+    }
+    private void MovingToHouse()
+    {
+        if (_rb.position.x > -2f && _rb.position.y > 0.5f && _rb.position.x < 2f && _rb.position.y < 1.5f) _currentState = State.House;
+
+        Vector2 bestDirection = Vector2.zero;
+        float bestDistance = float.MaxValue;
+
+        foreach (Vector2 dir in _dirs)
+        {
+            if (dir == -_currentDirection) continue;
+
+            if (CanMoveInDirection(dir, _rb.position, wallWithHouseLayer))
+            {
+                Vector2 testPosition = _rb.position + dir;
+                float distance = Vector2.Distance(testPosition, new Vector2(0,1));
+
+                Debug.DrawLine(testPosition, new Vector2(0, 1), new Color(1, 0, 0, 0.2f), 0.3f);
 
                 if (distance < bestDistance)
                 {
@@ -213,33 +322,7 @@ public class Blinky : MonoBehaviour
         }
 
         _currentDirection = bestDirection;
-        _rb.linearVelocity = _currentDirection * movingSpeed;
-    }
-    private void GhostFrightened()
-    {
-        _futureDirection = Vector2.zero;
-        List<Vector2> validDirections = new();
-
-        foreach (Vector2 dir in _dirs)
-        {
-            if (dir == -_currentDirection) continue;
-            if (CanMoveInDirection(dir, _rb.position))
-            {
-                validDirections.Add(dir);
-            }
-        }
-
-        if (validDirections.Count > 0)
-        {
-            _futureDirection = validDirections[UnityEngine.Random.Range(0, validDirections.Count)];
-        }
-        else
-        {
-            _futureDirection = _currentDirection;
-        }
-        _currentDirection = _futureDirection;
-        _rb.linearVelocity = _currentDirection * movingSpeed;
-
+        _rb.linearVelocity = 3 * movingSpeed * _currentDirection;
     }
     private bool GhostChasePacman()
     {
@@ -282,13 +365,14 @@ public class Blinky : MonoBehaviour
                 return pacman.position;
         }
     }
-    private void collector_OnEatingEnergy(object sender, EventArgs e)
+    private void Ñollector_OnEatingEnergy(object sender, EventArgs e)
     {
+        if (_currentState == State.Death) return;
         _currentState = State.Frightened;
         _FrightenedTimer = 0f;
     }
     private void OnDestroy()
     {
-        EnergyCollector.OnEatingEnergy -= collector_OnEatingEnergy;
+        EnergyCollector.OnEatingEnergy -= Ñollector_OnEatingEnergy;
     }
 }
