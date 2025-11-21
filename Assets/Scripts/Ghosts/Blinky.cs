@@ -33,7 +33,7 @@ public class Blinky : MonoBehaviour
     private Color _color;
     private bool _ChangeDirection = true;
     private int _Waves = 1;
-    private float _ChasingTimer = 0f;
+    private float _ChasingTimer = -1f;
     private float _ScatterTimer = 0f;
     private float _FrightenedTimer = 0f;
     private int _WaitForChoose = 0;
@@ -68,6 +68,7 @@ public class Blinky : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        UpdateWaves();
         StateHandler();
         if (GhostChasePacman())
         {
@@ -93,30 +94,9 @@ public class Blinky : MonoBehaviour
         {
             case State.Chasing:
                 GhostChasing();
-                _ChasingTimer += Time.deltaTime;
-                if (_Waves < 4 && _ChasingTimer >= 20f)
-                {
-                    _Waves++;
-                    _ChasingTimer = 0f;
-                    _currentState = State.Scatter;
-                    _currentDirection = -_currentDirection;
-                }
                 break;
             case State.Scatter:
                 GhostScatter();
-                _ScatterTimer += Time.deltaTime;
-                if (_Waves < 3 && _ScatterTimer >= 7f)
-                {
-                    _ScatterTimer = 0f;
-                    _currentState = State.Chasing;
-                    _currentDirection = -_currentDirection;
-                }
-                if (_Waves < 5 && _ScatterTimer >= 5f)
-                {
-                    _ScatterTimer = 0f;
-                    _currentState = State.Chasing;
-                    _currentDirection = -_currentDirection;
-                }
                 break;
             case State.Frightened:
                 GhostFrightened();
@@ -140,7 +120,17 @@ public class Blinky : MonoBehaviour
                 break;
             default:
             case State.House:
-                _cd.isTrigger = false;
+                _CanEatPacman = true;
+                _cd.isTrigger = true;
+                if (CanLeaveHome())
+                {
+                    _sr.color = _color;
+                    MovingFromHouse();
+                }
+                else
+                {
+                    _rb.linearVelocity = Vector2.zero;
+                }
                 break;
         }
     }
@@ -183,7 +173,7 @@ public class Blinky : MonoBehaviour
                 Vector2 testPosition = _rb.position + dir;
                 float distance = Vector2.Distance(testPosition, targetPosition);
 
-                Debug.DrawLine(testPosition, targetPosition, new Color(1, 0, 0, 0.2f), 0.3f);
+                //Debug.DrawLine(testPosition, targetPosition, new Color(1, 0, 0, 0.2f), 0.3f);
 
                 if (distance < bestDistance)
                 {
@@ -193,7 +183,7 @@ public class Blinky : MonoBehaviour
             }
         }
 
-        if (countOfDirs > 1) _WaitForChoose = blockSomeSwithingDirs; 
+        if (countOfDirs > 1) _WaitForChoose = blockSomeSwithingDirs;
 
         if (bestDirection == Vector2.zero)
         {
@@ -202,7 +192,7 @@ public class Blinky : MonoBehaviour
 
         _currentDirection = bestDirection;
         _rb.linearVelocity = _currentDirection * movingSpeed;
-}
+    }
     private void GhostScatter()
     {
         if (_WaitForChoose > 0)
@@ -232,7 +222,7 @@ public class Blinky : MonoBehaviour
                 Vector2 testPosition = _rb.position + dir;
                 float distance = Vector2.Distance(testPosition, cellOfScary.position);
 
-                Debug.DrawLine(testPosition, cellOfScary.position, new Color(1, 0, 0, 0.2f), 0.3f);
+                //Debug.DrawLine(testPosition, cellOfScary.position, new Color(1, 0, 0, 0.2f), 0.3f);
 
                 if (distance < bestDistance)
                 {
@@ -304,9 +294,9 @@ public class Blinky : MonoBehaviour
             if (CanMoveInDirection(dir, _rb.position, wallWithHouseLayer))
             {
                 Vector2 testPosition = _rb.position + dir;
-                float distance = Vector2.Distance(testPosition, new Vector2(0,1));
+                float distance = Vector2.Distance(testPosition, new Vector2(0, 1));
 
-                Debug.DrawLine(testPosition, new Vector2(0, 1), new Color(1, 0, 0, 0.2f), 0.3f);
+                //Debug.DrawLine(testPosition, new Vector2(0, 1), new Color(1, 0, 0, 0.2f), 0.3f);
 
                 if (distance < bestDistance)
                 {
@@ -324,6 +314,49 @@ public class Blinky : MonoBehaviour
         _currentDirection = bestDirection;
         _rb.linearVelocity = 3 * movingSpeed * _currentDirection;
     }
+    private void MovingFromHouse()
+    {
+        if (_rb.position.x > -0.2f && _rb.position.y > 3.85f && _rb.position.x < 0.2f && _rb.position.y < 4.1f)
+        {
+            _cd.isTrigger = false;
+            _currentState = State.Chasing;
+        }
+
+        Vector2 bestDirection = Vector2.zero;
+        float bestDistance = float.MaxValue;
+
+        if (_rb.position.x > -0.1f && _rb.position.x < 0.1f)
+        {
+            bestDirection = Vector2.up;
+        }
+        else
+        {
+            foreach (Vector2 dir in _dirs)
+            {
+                if (CanMoveInDirection(dir, _rb.position, wallWithHouseLayer))
+                {
+                    Vector2 testPosition = _rb.position + dir;
+                    float distance = Vector2.Distance(testPosition, new Vector2(0f, 4.1f));
+
+                    //Debug.DrawLine(testPosition, new Vector2(0, 4), new Color(1, 0, 0, 0.2f), 0.3f);
+
+                    if (distance < bestDistance)
+                    {
+                        bestDistance = distance;
+                        bestDirection = dir;
+                    }
+                }
+            }
+        }
+        if (bestDirection == Vector2.zero)
+        {
+            bestDirection = _currentDirection;
+        }
+
+        _currentDirection = bestDirection;
+        _rb.linearVelocity = movingSpeed * _currentDirection;
+
+    }
     private bool GhostChasePacman()
     {
         Vector2 _pacmanCell;
@@ -333,6 +366,57 @@ public class Blinky : MonoBehaviour
         _ghostCell.x = Mathf.Round(ghostTransform.position.x * 2f) / 2f;
         _ghostCell.y = Mathf.Round(ghostTransform.position.y);
         if (_pacmanCell == _ghostCell) return true;
+        return false;
+    }
+    private void UpdateWaves()
+    {
+        _ChasingTimer = (_ChasingTimer != -1f) ? _ChasingTimer + Time.deltaTime : -1f;
+        _ScatterTimer = (_ScatterTimer != -1f) ? _ScatterTimer + Time.deltaTime : -1f;
+        if (_ChasingTimer == -1f)
+        {
+            if (!IsUnActiveState()) _currentState = State.Scatter;
+        }
+        if (_ScatterTimer == -1f)
+        {
+            if (!IsUnActiveState()) _currentState = State.Chasing;
+        }
+        if (_Waves < 4 && _ChasingTimer >= 20f)
+        {
+            _Waves++;
+            _ChasingTimer = -1f;
+            _ScatterTimer = 0f;
+            if (IsUnActiveState()) return;
+            _currentState = State.Scatter;
+            _currentDirection = -_currentDirection;
+        }
+        if (_Waves < 3 && _ScatterTimer >= 7f)
+        {
+            _ScatterTimer = -1f;
+            _ChasingTimer = 0f;
+            if (IsUnActiveState()) return;
+            _currentState = State.Chasing;
+            _currentDirection = -_currentDirection;
+        }
+        if (_Waves < 5 && _ScatterTimer >= 5f)
+        {
+            _ScatterTimer = -1f;
+            _ChasingTimer = 0f;
+            if (IsUnActiveState()) return;
+            _currentState = State.Chasing;
+            _currentDirection = -_currentDirection;
+        }
+    }
+    private bool IsUnActiveState()
+    {
+        if (_currentState == State.Death || _currentState == State.House || _currentState == State.Frightened) return true;
+        return false;
+    }
+    private bool CanLeaveHome()
+    {
+        int AmountOfCoins = Player.Instance._countOfCoins;
+        if (ghost == Ghosts.Blinky || ghost == Ghosts.Pinky) return true;
+        else if (ghost == Ghosts.Inky && AmountOfCoins >= 30) return true;
+        else if (AmountOfCoins >= 60) return true;
         return false;
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -367,8 +451,9 @@ public class Blinky : MonoBehaviour
     }
     private void Ñollector_OnEatingEnergy(object sender, EventArgs e)
     {
-        if (_currentState == State.Death) return;
+        if (_currentState == State.Death || _currentState == State.House) return;
         _currentState = State.Frightened;
+        _CanEatPacman = false;
         _FrightenedTimer = 0f;
     }
     private void OnDestroy()
