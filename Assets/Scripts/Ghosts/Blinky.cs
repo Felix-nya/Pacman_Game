@@ -29,8 +29,6 @@ public class Blinky : MonoBehaviour
     private State _currentState;
     private CircleCollider2D _cd;
     private Rigidbody2D _rb;
-    private SpriteRenderer _sr;
-    private Color _color;
     private bool _ChangeDirection = true;
     private int _Waves = 1;
     private float _ChasingTimer = -1f;
@@ -58,13 +56,11 @@ public class Blinky : MonoBehaviour
     {
         _currentState = startingState;
         _rb = GetComponent<Rigidbody2D>();
-        _sr = GetComponent<SpriteRenderer>();
         _cd = GetComponent<CircleCollider2D>();
-        _color = _sr.color;
     }
     private void Start()
     {
-        EnergyCollector.OnEatingEnergy += Ñollector_OnEatingEnergy;
+        EnergyCollector.OnEatingEnergy += Collector_OnEatingEnergy;
     }
     private void FixedUpdate()
     {
@@ -103,7 +99,6 @@ public class Blinky : MonoBehaviour
                 if (_FrightenedTimer == 0f)
                 {
                     _CanEatPacman = false;
-                    _sr.color = Color.blueViolet;
                 }
                 _FrightenedTimer += Time.deltaTime;
                 if (_FrightenedTimer >= energyTime)
@@ -111,7 +106,6 @@ public class Blinky : MonoBehaviour
                     _FrightenedTimer = 0f;
                     _currentState = State.Chasing;
                     _CanEatPacman = true;
-                    _sr.color = _color;
                 }
                 break;
             case State.Death:
@@ -124,7 +118,6 @@ public class Blinky : MonoBehaviour
                 _cd.isTrigger = true;
                 if (CanLeaveHome())
                 {
-                    _sr.color = _color;
                     MovingFromHouse();
                 }
                 else
@@ -449,7 +442,7 @@ public class Blinky : MonoBehaviour
                 return pacman.position;
         }
     }
-    private void Ñollector_OnEatingEnergy(object sender, EventArgs e)
+    private void Collector_OnEatingEnergy(object sender, EventArgs e)
     {
         if (_currentState == State.Death || _currentState == State.House) return;
         _currentState = State.Frightened;
@@ -458,6 +451,6 @@ public class Blinky : MonoBehaviour
     }
     private void OnDestroy()
     {
-        EnergyCollector.OnEatingEnergy -= Ñollector_OnEatingEnergy;
+        EnergyCollector.OnEatingEnergy -= Collector_OnEatingEnergy;
     }
 }
