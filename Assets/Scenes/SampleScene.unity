@@ -7073,6 +7073,8 @@ GameObject:
   m_Component:
   - component: {fileID: 356391164}
   - component: {fileID: 356391165}
+  - component: {fileID: 356391167}
+  - component: {fileID: 356391166}
   m_Layer: 10
   m_Name: Pinky_Visual
   m_TagString: Untagged
@@ -7153,6 +7155,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &356391166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356391163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152807fc8195e3c44b8d4457c757e592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BlinkyVisual
+  ghost: {fileID: 1083034173}
+--- !u!95 &356391167
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356391163}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 46bbc1ebe6c2b2849a9591d64db8df8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &360704214
 GameObject:
   m_ObjectHideFlags: 0
@@ -21109,6 +21146,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1044910552}
   - component: {fileID: 1044910553}
+  - component: {fileID: 1044910555}
+  - component: {fileID: 1044910554}
   m_Layer: 10
   m_Name: Inky_Visual
   m_TagString: Untagged
@@ -21189,6 +21228,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1044910554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044910551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152807fc8195e3c44b8d4457c757e592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BlinkyVisual
+  ghost: {fileID: 1576344370}
+--- !u!95 &1044910555
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044910551}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fdacf17707969d146979195c07f1e797, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1069374632
 GameObject:
   m_ObjectHideFlags: 0
@@ -21471,6 +21545,9 @@ MonoBehaviour:
   ghost: 3
   energyTime: 10
   blockSomeSwithingDirs: 5
+  _currentDirection: {x: 1, y: 0}
+  _CanEatPacman: 1
+  _ExitFrightened: 0
 --- !u!1 &1084995236
 GameObject:
   m_ObjectHideFlags: 0
@@ -26311,6 +26388,9 @@ MonoBehaviour:
   ghost: 1
   energyTime: 10
   blockSomeSwithingDirs: 5
+  _currentDirection: {x: 1, y: 0}
+  _CanEatPacman: 1
+  _ExitFrightened: 0
 --- !u!1 &1312620985
 GameObject:
   m_ObjectHideFlags: 0
@@ -30261,6 +30341,9 @@ MonoBehaviour:
   ghost: 0
   energyTime: 10
   blockSomeSwithingDirs: 5
+  _currentDirection: {x: 1, y: 0}
+  _CanEatPacman: 1
+  _ExitFrightened: 0
 --- !u!58 &1515666919
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -31348,6 +31431,9 @@ MonoBehaviour:
   ghost: 2
   energyTime: 10
   blockSomeSwithingDirs: 5
+  _currentDirection: {x: 1, y: 0}
+  _CanEatPacman: 1
+  _ExitFrightened: 0
 --- !u!1 &1578108239
 GameObject:
   m_ObjectHideFlags: 0
@@ -41249,6 +41335,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1960740635}
   - component: {fileID: 1960740636}
+  - component: {fileID: 1960740638}
+  - component: {fileID: 1960740637}
   m_Layer: 10
   m_Name: Blinky_Visual
   m_TagString: Untagged
@@ -41329,6 +41417,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1960740637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960740634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152807fc8195e3c44b8d4457c757e592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BlinkyVisual
+  ghost: {fileID: 1515666918}
+--- !u!95 &1960740638
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960740634}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dd73cb2a76be4934ba710d7597c6193c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1965318102
 GameObject:
   m_ObjectHideFlags: 0
@@ -45265,6 +45388,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2145635419}
   - component: {fileID: 2145635420}
+  - component: {fileID: 2145635422}
+  - component: {fileID: 2145635421}
   m_Layer: 10
   m_Name: Clyde_Visual
   m_TagString: Untagged
@@ -45345,6 +45470,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2145635421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145635418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152807fc8195e3c44b8d4457c757e592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BlinkyVisual
+  ghost: {fileID: 1309087410}
+--- !u!95 &2145635422
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145635418}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 553e84cf4251d6b43a48cb95493e2afe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

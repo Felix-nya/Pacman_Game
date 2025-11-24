@@ -23,7 +23,7 @@ public class Blinky : MonoBehaviour
     [SerializeField] private int energyTime = 10;
     [SerializeField] private int blockSomeSwithingDirs = 5;
 
-    private Vector2 _currentDirection = Vector2.right;
+    public Vector2 _currentDirection = Vector2.right;
     private Vector2 _futureDirection = Vector2.zero;
     private readonly Vector2[] _dirs = { Vector2.right, Vector2.down, Vector2.left, Vector2.up };
     private State _currentState;
@@ -35,7 +35,8 @@ public class Blinky : MonoBehaviour
     private float _ScatterTimer = 0f;
     private float _FrightenedTimer = 0f;
     private int _WaitForChoose = 0;
-    private bool _CanEatPacman = true;
+    public bool _CanEatPacman = true;
+    public bool _ExitFrightened = false;
 
     private enum State
     {
@@ -101,11 +102,16 @@ public class Blinky : MonoBehaviour
                     _CanEatPacman = false;
                 }
                 _FrightenedTimer += Time.deltaTime;
+                if ((_FrightenedTimer >= (energyTime * (1f/2f))) && !_ExitFrightened)
+                {
+                    _ExitFrightened = true;
+                }
                 if (_FrightenedTimer >= energyTime)
                 {
                     _FrightenedTimer = 0f;
                     _currentState = State.Chasing;
                     _CanEatPacman = true;
+                    _ExitFrightened = false;
                 }
                 break;
             case State.Death:
@@ -447,6 +453,7 @@ public class Blinky : MonoBehaviour
         if (_currentState == State.Death || _currentState == State.House) return;
         _currentState = State.Frightened;
         _CanEatPacman = false;
+        _ExitFrightened = false;
         _FrightenedTimer = 0f;
     }
     private void OnDestroy()
