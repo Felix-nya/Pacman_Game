@@ -1,29 +1,22 @@
-using System.ComponentModel;
 using UnityEngine;
 
-public class BlinkyVisual : MonoBehaviour
+public class PacmanVisual : MonoBehaviour
 {
     private static readonly int Right = Animator.StringToHash(IsRight);
     private static readonly int Down = Animator.StringToHash(IsDown);
     private static readonly int Up = Animator.StringToHash(IsUp);
     private static readonly int Left = Animator.StringToHash(IsLeft);
-    private static readonly int ExitFrightened = Animator.StringToHash(IsExitFrightened);
-    private static readonly int Frightened = Animator.StringToHash(IsFrightened);
     private static readonly int Death = Animator.StringToHash(IsDeath);
 
     private Animator animator;
-    [SerializeField] private Blinky ghost;
     private Vector2 _curDirection;
-    private bool _isFrightened;
-    private bool _isExitFrightenedVis;
-    private bool _isDeath;
+    private bool _isDeath = false;
+    private bool _isMoving = true;
 
     private const string IsRight = "IsRight";
     private const string IsDown = "IsDown";
     private const string IsUp = "IsUp";
     private const string IsLeft = "IsLeft";
-    private const string IsExitFrightened = "IsExitFrightened";
-    private const string IsFrightened = "IsFrightened";
     private const string IsDeath = "IsDeath";
 
 
@@ -35,19 +28,27 @@ public class BlinkyVisual : MonoBehaviour
     private void Update()
     {
         SettingAnimations();
+        if (!_isMoving && !_isDeath)
+        {
+            PauseAnimation();
+        }
+        else
+        {
+            ResumeAnimation();
+        }
     }
 
     private void SettingAnimations()
     {
-        _curDirection = ghost._currentDirection;
-        _isFrightened = !ghost._CanEatPacman;
-        _isExitFrightenedVis = ghost._ExitFrightened;
-        _isDeath = ghost._isDeath;
-        
+        _curDirection = Player.Instance._currentDirection;
+        _isDeath = Player.Instance._isDeath;
+        _isMoving = Player.Instance._isMoving;
+
         if (_isDeath)
         {
             animator.SetBool(Death, true);
-        } else
+        }
+        else
         {
             animator.SetBool(Death, false);
         }
@@ -80,23 +81,16 @@ public class BlinkyVisual : MonoBehaviour
             animator.SetBool(Up, false);
             animator.SetBool(Left, false);
         }
-        if (_isFrightened)
-        {
-            if (_isExitFrightenedVis)
-            {
-                animator.SetBool(ExitFrightened, true);
-                animator.SetBool(Frightened, false);
-            }
-            else
-            {
-                animator.SetBool(Frightened, true);
-                animator.SetBool(ExitFrightened, false);
-            }
-        }
-        else
-        {
-            animator.SetBool(ExitFrightened, false);
-            animator.SetBool(Frightened, false);
-        }
     }
+
+    private void PauseAnimation()
+    {
+        animator.speed = 0f;
+    }
+
+    private void ResumeAnimation()
+    {
+        animator.speed = 1f;
+    }
+
 }

@@ -37,6 +37,7 @@ public class Blinky : MonoBehaviour
     private int _WaitForChoose = 0;
     public bool _CanEatPacman = true;
     public bool _ExitFrightened = false;
+    public bool _isDeath = false;
 
     private enum State
     {
@@ -71,16 +72,11 @@ public class Blinky : MonoBehaviour
         {
             if (_CanEatPacman)
             {
-#if UNITY_EDITOR
-                UnityEditor.EditorApplication.ExitPlaymode();
-#endif
-
-                Application.Quit();
-
-                Debug.Log("Exit");
+                Player.Instance.Death();
             }
             else
             {
+                _isDeath = true;
                 _currentState = State.Death;
             }
         }
@@ -109,9 +105,9 @@ public class Blinky : MonoBehaviour
                 if (_FrightenedTimer >= energyTime)
                 {
                     _FrightenedTimer = 0f;
-                    _currentState = State.Chasing;
-                    _CanEatPacman = true;
                     _ExitFrightened = false;
+                    _CanEatPacman = true;
+                    _currentState = State.Chasing;
                 }
                 break;
             case State.Death:
@@ -120,7 +116,7 @@ public class Blinky : MonoBehaviour
                 break;
             default:
             case State.House:
-                _CanEatPacman = true;
+                
                 _cd.isTrigger = true;
                 if (CanLeaveHome())
                 {
@@ -281,7 +277,13 @@ public class Blinky : MonoBehaviour
     }
     private void MovingToHouse()
     {
-        if (_rb.position.x > -2f && _rb.position.y > 0.5f && _rb.position.x < 2f && _rb.position.y < 1.5f) _currentState = State.House;
+        if (_rb.position.x > -2f && _rb.position.y > 0.5f && _rb.position.x < 2f && _rb.position.y < 1.5f)
+        {
+            _currentState = State.House;
+            _ExitFrightened = false;
+            _CanEatPacman = true;
+            _isDeath = false;
+        }
 
         Vector2 bestDirection = Vector2.zero;
         float bestDistance = float.MaxValue;

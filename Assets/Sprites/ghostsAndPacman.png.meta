@@ -1,0 +1,2149 @@
+fileFormatVersion: 2
+guid: 7a22d097d2d3c9d4793dcff7ae0d12b7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1204283128196077873
+    second: ghostsAndPacman_0
+  - first:
+      213: -1441409069621694957
+    second: ghostsAndPacman_1
+  - first:
+      213: 7121088776764329561
+    second: ghostsAndPacman_2
+  - first:
+      213: 4613323877560462097
+    second: ghostsAndPacman_3
+  - first:
+      213: 7830037322084609309
+    second: ghostsAndPacman_4
+  - first:
+      213: -7964731677923797738
+    second: ghostsAndPacman_5
+  - first:
+      213: 4468113594128071901
+    second: ghostsAndPacman_6
+  - first:
+      213: -6032135364318362873
+    second: ghostsAndPacman_7
+  - first:
+      213: -7338023416756108836
+    second: ghostsAndPacman_8
+  - first:
+      213: -585122343345314850
+    second: ghostsAndPacman_9
+  - first:
+      213: -2645291295193273835
+    second: ghostsAndPacman_10
+  - first:
+      213: -3374418570365450028
+    second: ghostsAndPacman_11
+  - first:
+      213: 4394225646230281413
+    second: ghostsAndPacman_12
+  - first:
+      213: -8833319433873197458
+    second: ghostsAndPacman_13
+  - first:
+      213: 5448698812456556126
+    second: ghostsAndPacman_14
+  - first:
+      213: 8979559255052404770
+    second: ghostsAndPacman_15
+  - first:
+      213: 4625963247224822459
+    second: ghostsAndPacman_16
+  - first:
+      213: -4757304227978522001
+    second: ghostsAndPacman_17
+  - first:
+      213: 4655032119792099683
+    second: ghostsAndPacman_18
+  - first:
+      213: 4171314683687580158
+    second: ghostsAndPacman_19
+  - first:
+      213: -6916450032860473207
+    second: ghostsAndPacman_20
+  - first:
+      213: 8873234777342065029
+    second: ghostsAndPacman_21
+  - first:
+      213: -1014003957932360197
+    second: ghostsAndPacman_22
+  - first:
+      213: -8933266212302427402
+    second: ghostsAndPacman_23
+  - first:
+      213: -2088787705009692341
+    second: ghostsAndPacman_24
+  - first:
+      213: 5075268653443622248
+    second: ghostsAndPacman_25
+  - first:
+      213: 7052396240568970456
+    second: ghostsAndPacman_26
+  - first:
+      213: -1675320814563073567
+    second: ghostsAndPacman_27
+  - first:
+      213: -7534203744592899517
+    second: ghostsAndPacman_28
+  - first:
+      213: -9076010611290659220
+    second: ghostsAndPacman_29
+  - first:
+      213: -2842554830808706468
+    second: ghostsAndPacman_30
+  - first:
+      213: -3305189684536530755
+    second: ghostsAndPacman_31
+  - first:
+      213: -5178806858617160029
+    second: ghostsAndPacman_32
+  - first:
+      213: -2760944798613812963
+    second: ghostsAndPacman_33
+  - first:
+      213: -1427539940604975047
+    second: ghostsAndPacman_34
+  - first:
+      213: -4771663246531073208
+    second: ghostsAndPacman_35
+  - first:
+      213: -7223455062992682651
+    second: ghostsAndPacman_36
+  - first:
+      213: 8568880742131392147
+    second: ghostsAndPacman_37
+  - first:
+      213: -1141916120645984974
+    second: ghostsAndPacman_38
+  - first:
+      213: -5632902320833983209
+    second: ghostsAndPacman_39
+  - first:
+      213: -4846690738512201105
+    second: ghostsAndPacman_40
+  - first:
+      213: -6710314839292870905
+    second: ghostsAndPacman_41
+  - first:
+      213: 1584595332985101527
+    second: ghostsAndPacman_42
+  - first:
+      213: 6446272084081300619
+    second: ghostsAndPacman_43
+  - first:
+      213: 7359672271256882405
+    second: ghostsAndPacman_44
+  - first:
+      213: 5708010956852439831
+    second: ghostsAndPacman_45
+  - first:
+      213: 9131503710143534054
+    second: ghostsAndPacman_46
+  - first:
+      213: -1474048250426444883
+    second: ghostsAndPacman_47
+  - first:
+      213: -3401545947598035780
+    second: ghostsAndPacman_48
+  - first:
+      213: -2094045705317754931
+    second: ghostsAndPacman_49
+  - first:
+      213: 562215118529793782
+    second: ghostsAndPacman_50
+  - first:
+      213: 3387423004129046236
+    second: ghostsAndPacman_51
+  - first:
+      213: -8055139355113581050
+    second: ghostsAndPacman_52
+  - first:
+      213: 7542296067032092925
+    second: ghostsAndPacman_53
+  - first:
+      213: -8652890274675778002
+    second: ghostsAndPacman_54
+  - first:
+      213: 5478861107254299754
+    second: ghostsAndPacman_55
+  - first:
+      213: -428694722854854454
+    second: ghostsAndPacman_56
+  - first:
+      213: -5167350444612809140
+    second: ghostsAndPacman_57
+  - first:
+      213: 7319595047718859630
+    second: ghostsAndPacman_58
+  - first:
+      213: -4712624549438033856
+    second: ghostsAndPacman_59
+  - first:
+      213: 5753267038234752473
+    second: ghostsAndPacman_60
+  - first:
+      213: 2526978525508285543
+    second: ghostsAndPacman_61
+  - first:
+      213: 2457833425242390555
+    second: ghostsAndPacman_62
+  - first:
+      213: -2552544354974633742
+    second: ghostsAndPacman_63
+  - first:
+      213: 572337754289460640
+    second: ghostsAndPacman_64
+  - first:
+      213: -2524877440113867368
+    second: ghostsAndPacman_65
+  - first:
+      213: 2729392528532585624
+    second: ghostsAndPacman_66
+  - first:
+      213: -3347878150083908962
+    second: ghostsAndPacman_67
+  - first:
+      213: -4147961738265943555
+    second: ghostsAndPacman_68
+  - first:
+      213: -4909093552965012096
+    second: ghostsAndPacman_69
+  - first:
+      213: 8901753167729898286
+    second: ghostsAndPacman_70
+  - first:
+      213: -4551157741643419182
+    second: ghostsAndPacman_71
+  - first:
+      213: 8387213490273248950
+    second: ghostsAndPacman_72
+  - first:
+      213: 7575814508842705327
+    second: ghostsAndPacman_73
+  - first:
+      213: -2717006856858473347
+    second: ghostsAndPacman_74
+  - first:
+      213: 7649519119176065634
+    second: ghostsAndPacman_75
+  - first:
+      213: -5496734971795451569
+    second: ghostsAndPacman_76
+  - first:
+      213: 707657836345921381
+    second: ghostsAndPacman_77
+  - first:
+      213: -3117305885225951805
+    second: ghostsAndPacman_78
+  - first:
+      213: 3760650432838380701
+    second: ghostsAndPacman_79
+  - first:
+      213: -714012985770035321
+    second: ghostsAndPacman_80
+  - first:
+      213: 6908282085561301541
+    second: ghostsAndPacman_81
+  - first:
+      213: 8026163440544385159
+    second: ghostsAndPacman_82
+  - first:
+      213: 4205490607093567592
+    second: ghostsAndPacman_83
+  - first:
+      213: 5875509565165206387
+    second: ghostsAndPacman_84
+  - first:
+      213: 7026564120653631579
+    second: ghostsAndPacman_85
+  - first:
+      213: 8796607599668651072
+    second: ghostsAndPacman_86
+  - first:
+      213: -7794812809173419364
+    second: ghostsAndPacman_87
+  - first:
+      213: 2360701791903414300
+    second: ghostsAndPacman_88
+  - first:
+      213: 9056386452405431448
+    second: ghostsAndPacman_89
+  - first:
+      213: 6250481245321543004
+    second: ghostsAndPacman_90
+  - first:
+      213: -931840912276121536
+    second: ghostsAndPacman_91
+  - first:
+      213: -1112846426939355091
+    second: ghostsAndPacman_92
+  - first:
+      213: 606360949464402433
+    second: ghostsAndPacman_93
+  - first:
+      213: -81361446068433158
+    second: ghostsAndPacman_94
+  - first:
+      213: 8736621220604256200
+    second: ghostsAndPacman_95
+  - first:
+      213: 302026546712285098
+    second: ghostsAndPacman_96
+  - first:
+      213: -8500610664836481512
+    second: ghostsAndPacman_97
+  - first:
+      213: -5501859546891389163
+    second: ghostsAndPacman_98
+  - first:
+      213: 7546225977884607260
+    second: ghostsAndPacman_99
+  - first:
+      213: 9060401668417172160
+    second: ghostsAndPacman_100
+  - first:
+      213: 4090884414890563852
+    second: ghostsAndPacman_101
+  - first:
+      213: 1316406858217111612
+    second: ghostsAndPacman_102
+  - first:
+      213: -5489271055080991411
+    second: ghostsAndPacman_103
+  - first:
+      213: 5715499914949760663
+    second: ghostsAndPacman_104
+  - first:
+      213: -625233207629035208
+    second: ghostsAndPacman_105
+  - first:
+      213: 4900169136589207691
+    second: ghostsAndPacman_106
+  - first:
+      213: 1757680405617291290
+    second: ghostsAndPacman_107
+  - first:
+      213: -210440191212886193
+    second: ghostsAndPacman_108
+  - first:
+      213: -6353042530905158454
+    second: ghostsAndPacman_109
+  - first:
+      213: -720683750757019921
+    second: ghostsAndPacman_110
+  - first:
+      213: 781897682030672480
+    second: ghostsAndPacman_111
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 26
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ghostsAndPacman_0
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 585
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1399f11ef1976b010800000000000000
+      internalID: 1204283128196077873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_1
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 585
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31e2c2d86161ffbe0800000000000000
+      internalID: -1441409069621694957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 520
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95e0f09638033d260800000000000000
+      internalID: 7121088776764329561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_3
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 520
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11ba1dbcf91d50040800000000000000
+      internalID: 4613323877560462097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_4
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 520
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1d67e88571e9ac60800000000000000
+      internalID: 7830037322084609309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_5
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 455
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6151d06ecb6977190800000000000000
+      internalID: -7964731677923797738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_6
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 455
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddcf81a04ade10e30800000000000000
+      internalID: 4468113594128071901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_7
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 456
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7038bb488dc894ca0800000000000000
+      internalID: -6032135364318362873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_8
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 964
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd101cab49a1a2a90800000000000000
+      internalID: -7338023416756108836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_9
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 959
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed322ce245a31e7f0800000000000000
+      internalID: -585122343345314850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_10
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 952
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51a629615990a4bd0800000000000000
+      internalID: -2645291295193273835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_11
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 952
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d8c2ed4038ab21d0800000000000000
+      internalID: -3374418570365450028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_12
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 456
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cc977291fc6bfc30800000000000000
+      internalID: 4394225646230281413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_13
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 456
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e66fe6c96ceb96580800000000000000
+      internalID: -8833319433873197458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_14
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 456
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e56d09493baad9b40800000000000000
+      internalID: 5448698812456556126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_15
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 456
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22848f4119dcd9c70800000000000000
+      internalID: 8979559255052404770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_16
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 456
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bba19de5019b23040800000000000000
+      internalID: 4625963247224822459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_17
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 456
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6250ea8209aafdb0800000000000000
+      internalID: -4757304227978522001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_18
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 456
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 361ed3eac0ff99040800000000000000
+      internalID: 4655032119792099683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_19
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 455
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef1b19faa9c73e930800000000000000
+      internalID: 4171314683687580158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_20
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 455
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 988dc9c0755d300a0800000000000000
+      internalID: -6916450032860473207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_21
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 456
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 589bd108400142b70800000000000000
+      internalID: 8873234777342065029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_22
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 328
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfdf99ec5c88de1f0800000000000000
+      internalID: -1014003957932360197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_23
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 327
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fae6bbd5b9a60480800000000000000
+      internalID: -8933266212302427402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_24
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 327
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b41a1bf26a22303e0800000000000000
+      internalID: -2088787705009692341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_25
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 327
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 865ae2c43f9fe6640800000000000000
+      internalID: 5075268653443622248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_26
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 327
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dce96ef3052fd160800000000000000
+      internalID: 7052396240568970456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_27
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 327
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e1662b689010c8e0800000000000000
+      internalID: -1675320814563073567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_28
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 327
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3425f1abc91217790800000000000000
+      internalID: -7534203744592899517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_29
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 327
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6628509f688b0280800000000000000
+      internalID: -9076010611290659220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_30
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 327
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c52931f11773d88d0800000000000000
+      internalID: -2842554830808706468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_31
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 327
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db82ae95e7b9122d0800000000000000
+      internalID: -3305189684536530755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_32
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 327
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ae74cfb99e2128b0800000000000000
+      internalID: -5178806858617160029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_33
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 327
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d19492275572fa9d0800000000000000
+      internalID: -2760944798613812963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_34
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 327
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 938ee89ccfb503ce0800000000000000
+      internalID: -1427539940604975047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_35
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 184
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84b6ab20f85a7cdb0800000000000000
+      internalID: -4771663246531073208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_36
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 184
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 561035744e121cb90800000000000000
+      internalID: -7223455062992682651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_37
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 184
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39e5d6592a7cae670800000000000000
+      internalID: 8568880742131392147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_38
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 760
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23d9a91a6591720f0800000000000000
+      internalID: -1141916120645984974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_39
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 760
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71d87300f29e3d1b0800000000000000
+      internalID: -5632902320833983209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_40
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 184
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6afdc2c3781dbcb0800000000000000
+      internalID: -4846690738512201105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_41
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 184
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70f7ae8d43c20e2a0800000000000000
+      internalID: -6710314839292870905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_42
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 184
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dc915f4f0d9df510800000000000000
+      internalID: 1584595332985101527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_43
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 184
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b84de218e42c57950800000000000000
+      internalID: 6446272084081300619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_44
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 760
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ec0f8fffeec22660800000000000000
+      internalID: 7359672271256882405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_45
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 760
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71b2a3119bde63f40800000000000000
+      internalID: 5708010956852439831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_46
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 184
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e3544c5e3e99be70800000000000000
+      internalID: 9131503710143534054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_47
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 184
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da3bb831de02b8be0800000000000000
+      internalID: -1474048250426444883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_48
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 184
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb4ef3a9bf74bc0d0800000000000000
+      internalID: -3401545947598035780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_49
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 184
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc75a17968470f2e0800000000000000
+      internalID: -2094045705317754931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_50
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 184
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fe825beba36dc700800000000000000
+      internalID: 562215118529793782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_51
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 184
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cde2911664b820f20800000000000000
+      internalID: 3387423004129046236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_56
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 648
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac0e62fbb68fc0af0800000000000000
+      internalID: -428694722854854454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_57
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 648
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4e85eef522e948b0800000000000000
+      internalID: -5167350444612809140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_58
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 648
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e63bdfe3aec649560800000000000000
+      internalID: 7319595047718859630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_59
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 584
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 040f5fad0f4699eb0800000000000000
+      internalID: -4712624549438033856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_60
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 585
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d532ff93e5b7df40800000000000000
+      internalID: 5753267038234752473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_61
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 585
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76436f79491a11320800000000000000
+      internalID: 2526978525508285543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_62
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 585
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1087a46a7afb1220800000000000000
+      internalID: 2457833425242390555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_63
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 585
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f0fe40ee6a839cd0800000000000000
+      internalID: -2552544354974633742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_64
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 585
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a5d7f7b72a51f700800000000000000
+      internalID: 572337754289460640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_65
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 585
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8958d987855d5fcd0800000000000000
+      internalID: -2524877440113867368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_66
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 585
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89c3ac33b00c0e520800000000000000
+      internalID: 2729392528532585624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_67
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 585
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9ae4f07f82f981d0800000000000000
+      internalID: -3347878150083908962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_68
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 584
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df12fb0a6ca7f66c0800000000000000
+      internalID: -4147961738265943555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_69
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 584
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0853c5e4c656fdbb0800000000000000
+      internalID: -4909093552965012096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_84
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 393
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37bf41ad1d00a8150800000000000000
+      internalID: 5875509565165206387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_85
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 391
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b509013e6de538160800000000000000
+      internalID: 7026564120653631579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_86
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 391
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04460c66104d31a70800000000000000
+      internalID: 8796607599668651072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_98
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 248
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 517727764e775a3b0800000000000000
+      internalID: -5501859546891389163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_99
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 248
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1303a69b8499b860800000000000000
+      internalID: 7546225977884607260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostsAndPacman_100
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 248
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c2bc5830530dbd70800000000000000
+      internalID: 9060401668417172160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d1ade46ca13fe4146bdda86c440f70f3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ghostsAndPacman_0: 1204283128196077873
+      ghostsAndPacman_1: -1441409069621694957
+      ghostsAndPacman_10: -2645291295193273835
+      ghostsAndPacman_100: 9060401668417172160
+      ghostsAndPacman_101: 4090884414890563852
+      ghostsAndPacman_102: 1316406858217111612
+      ghostsAndPacman_103: -5489271055080991411
+      ghostsAndPacman_104: 5715499914949760663
+      ghostsAndPacman_105: -625233207629035208
+      ghostsAndPacman_106: 4900169136589207691
+      ghostsAndPacman_107: 1757680405617291290
+      ghostsAndPacman_108: -210440191212886193
+      ghostsAndPacman_109: -6353042530905158454
+      ghostsAndPacman_11: -3374418570365450028
+      ghostsAndPacman_110: -720683750757019921
+      ghostsAndPacman_111: 781897682030672480
+      ghostsAndPacman_12: 4394225646230281413
+      ghostsAndPacman_13: -8833319433873197458
+      ghostsAndPacman_14: 5448698812456556126
+      ghostsAndPacman_15: 8979559255052404770
+      ghostsAndPacman_16: 4625963247224822459
+      ghostsAndPacman_17: -4757304227978522001
+      ghostsAndPacman_18: 4655032119792099683
+      ghostsAndPacman_19: 4171314683687580158
+      ghostsAndPacman_2: 7121088776764329561
+      ghostsAndPacman_20: -6916450032860473207
+      ghostsAndPacman_21: 8873234777342065029
+      ghostsAndPacman_22: -1014003957932360197
+      ghostsAndPacman_23: -8933266212302427402
+      ghostsAndPacman_24: -2088787705009692341
+      ghostsAndPacman_25: 5075268653443622248
+      ghostsAndPacman_26: 7052396240568970456
+      ghostsAndPacman_27: -1675320814563073567
+      ghostsAndPacman_28: -7534203744592899517
+      ghostsAndPacman_29: -9076010611290659220
+      ghostsAndPacman_3: 4613323877560462097
+      ghostsAndPacman_30: -2842554830808706468
+      ghostsAndPacman_31: -3305189684536530755
+      ghostsAndPacman_32: -5178806858617160029
+      ghostsAndPacman_33: -2760944798613812963
+      ghostsAndPacman_34: -1427539940604975047
+      ghostsAndPacman_35: -4771663246531073208
+      ghostsAndPacman_36: -7223455062992682651
+      ghostsAndPacman_37: 8568880742131392147
+      ghostsAndPacman_38: -1141916120645984974
+      ghostsAndPacman_39: -5632902320833983209
+      ghostsAndPacman_4: 7830037322084609309
+      ghostsAndPacman_40: -4846690738512201105
+      ghostsAndPacman_41: -6710314839292870905
+      ghostsAndPacman_42: 1584595332985101527
+      ghostsAndPacman_43: 6446272084081300619
+      ghostsAndPacman_44: 7359672271256882405
+      ghostsAndPacman_45: 5708010956852439831
+      ghostsAndPacman_46: 9131503710143534054
+      ghostsAndPacman_47: -1474048250426444883
+      ghostsAndPacman_48: -3401545947598035780
+      ghostsAndPacman_49: -2094045705317754931
+      ghostsAndPacman_5: -7964731677923797738
+      ghostsAndPacman_50: 562215118529793782
+      ghostsAndPacman_51: 3387423004129046236
+      ghostsAndPacman_52: -8055139355113581050
+      ghostsAndPacman_53: 7542296067032092925
+      ghostsAndPacman_54: -8652890274675778002
+      ghostsAndPacman_55: 5478861107254299754
+      ghostsAndPacman_56: -428694722854854454
+      ghostsAndPacman_57: -5167350444612809140
+      ghostsAndPacman_58: 7319595047718859630
+      ghostsAndPacman_59: -4712624549438033856
+      ghostsAndPacman_6: 4468113594128071901
+      ghostsAndPacman_60: 5753267038234752473
+      ghostsAndPacman_61: 2526978525508285543
+      ghostsAndPacman_62: 2457833425242390555
+      ghostsAndPacman_63: -2552544354974633742
+      ghostsAndPacman_64: 572337754289460640
+      ghostsAndPacman_65: -2524877440113867368
+      ghostsAndPacman_66: 2729392528532585624
+      ghostsAndPacman_67: -3347878150083908962
+      ghostsAndPacman_68: -4147961738265943555
+      ghostsAndPacman_69: -4909093552965012096
+      ghostsAndPacman_7: -6032135364318362873
+      ghostsAndPacman_70: 8901753167729898286
+      ghostsAndPacman_71: -4551157741643419182
+      ghostsAndPacman_72: 8387213490273248950
+      ghostsAndPacman_73: 7575814508842705327
+      ghostsAndPacman_74: -2717006856858473347
+      ghostsAndPacman_75: 7649519119176065634
+      ghostsAndPacman_76: -5496734971795451569
+      ghostsAndPacman_77: 707657836345921381
+      ghostsAndPacman_78: -3117305885225951805
+      ghostsAndPacman_79: 3760650432838380701
+      ghostsAndPacman_8: -7338023416756108836
+      ghostsAndPacman_80: -714012985770035321
+      ghostsAndPacman_81: 6908282085561301541
+      ghostsAndPacman_82: 8026163440544385159
+      ghostsAndPacman_83: 4205490607093567592
+      ghostsAndPacman_84: 5875509565165206387
+      ghostsAndPacman_85: 7026564120653631579
+      ghostsAndPacman_86: 8796607599668651072
+      ghostsAndPacman_87: -7794812809173419364
+      ghostsAndPacman_88: 2360701791903414300
+      ghostsAndPacman_89: 9056386452405431448
+      ghostsAndPacman_9: -585122343345314850
+      ghostsAndPacman_90: 6250481245321543004
+      ghostsAndPacman_91: -931840912276121536
+      ghostsAndPacman_92: -1112846426939355091
+      ghostsAndPacman_93: 606360949464402433
+      ghostsAndPacman_94: -81361446068433158
+      ghostsAndPacman_95: 8736621220604256200
+      ghostsAndPacman_96: 302026546712285098
+      ghostsAndPacman_97: -8500610664836481512
+      ghostsAndPacman_98: -5501859546891389163
+      ghostsAndPacman_99: 7546225977884607260
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

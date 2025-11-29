@@ -2088,6 +2088,8 @@ GameObject:
   m_Component:
   - component: {fileID: 139993010}
   - component: {fileID: 139993011}
+  - component: {fileID: 139993012}
+  - component: {fileID: 139993013}
   m_Layer: 10
   m_Name: Pacman_Visual
   m_TagString: Untagged
@@ -2168,6 +2170,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &139993012
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139993009}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8694012d405ec5248abaa76fac4588b2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &139993013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139993009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec0a4de72128a3649a5cd733f1c52264, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PacmanVisual
 --- !u!1 &147059325
 GameObject:
   m_ObjectHideFlags: 0
@@ -7178,7 +7214,7 @@ Animator:
   m_GameObject: {fileID: 356391163}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 46bbc1ebe6c2b2849a9591d64db8df8b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7800b659fd25f0449b99311162de6661, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -21251,7 +21287,7 @@ Animator:
   m_GameObject: {fileID: 1044910551}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fdacf17707969d146979195c07f1e797, type: 2}
+  m_Controller: {fileID: 9100000, guid: dd7b9fda829ea8c41a1f4d20b3360f5e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -21548,6 +21584,7 @@ MonoBehaviour:
   _currentDirection: {x: 1, y: 0}
   _CanEatPacman: 1
   _ExitFrightened: 0
+  _isDeath: 0
 --- !u!1 &1084995236
 GameObject:
   m_ObjectHideFlags: 0
@@ -26391,6 +26428,7 @@ MonoBehaviour:
   _currentDirection: {x: 1, y: 0}
   _CanEatPacman: 1
   _ExitFrightened: 0
+  _isDeath: 0
 --- !u!1 &1312620985
 GameObject:
   m_ObjectHideFlags: 0
@@ -30344,6 +30382,7 @@ MonoBehaviour:
   _currentDirection: {x: 1, y: 0}
   _CanEatPacman: 1
   _ExitFrightened: 0
+  _isDeath: 0
 --- !u!58 &1515666919
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -31434,6 +31473,7 @@ MonoBehaviour:
   _currentDirection: {x: 1, y: 0}
   _CanEatPacman: 1
   _ExitFrightened: 0
+  _isDeath: 0
 --- !u!1 &1578108239
 GameObject:
   m_ObjectHideFlags: 0
@@ -31792,6 +31832,7 @@ MonoBehaviour:
   distanceToStop: 0.74
   _countOfCoins: 0
   _currentDirection: {x: 1, y: 0}
+  _isDeath: 0
 --- !u!50 &1587691663
 Rigidbody2D:
   serializedVersion: 5
@@ -45493,7 +45534,7 @@ Animator:
   m_GameObject: {fileID: 2145635418}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 553e84cf4251d6b43a48cb95493e2afe, type: 2}
+  m_Controller: {fileID: 9100000, guid: 143af7393c83c134b86fb7cb0fbd5dc3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

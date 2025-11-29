@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,6 +16,8 @@ public class Player : MonoBehaviour
     public Vector2 _currentDirection = Vector2.right;
     private Vector2 _nextDirection;
     private Rigidbody2D _rb;
+    public bool _isDeath = false;
+    public bool _isMoving = true;
 
     private void Awake()
     {
@@ -24,24 +27,48 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        _inputVector = InputSystem.Instance.GetMovementVector();
-        _inputVector = RoundToFourDirections(_inputVector);
-
-        if (_inputVector != Vector2.zero)
+        if (!_isDeath)
         {
-            _nextDirection = _inputVector;
+            _inputVector = InputSystem.Instance.GetMovementVector();
+            _inputVector = RoundToFourDirections(_inputVector);
+
+            if (_inputVector != Vector2.zero)
+            {
+                _nextDirection = _inputVector;
+            }
         }
     }
 
     private void FixedUpdate()
     {
-        if (_nextDirection != Vector2.zero && CanMoveInDirection() && _nextDirection != _currentDirection)
+        HandleMovement();
+    }
+
+    private void HandleMovement()
+    {
+        if (MathF.Abs(_rb.linearVelocity.x) < 0.1f && MathF.Abs(_rb.linearVelocity.y) < 0.1f)
         {
-            _currentDirection = _nextDirection;
-            _nextDirection = Vector2.zero;
+            _isMoving = false;
+        }
+        else
+        {
+            _isMoving = true;
         }
 
-        _rb.linearVelocity = _currentDirection * movingSpeed;
+        if (!_isDeath)
+        {
+            if (_nextDirection != Vector2.zero && CanMoveInDirection() && _nextDirection != _currentDirection)
+            {
+                _currentDirection = _nextDirection;
+                _nextDirection = Vector2.zero;
+            }
+
+            _rb.linearVelocity = _currentDirection * movingSpeed;
+        }
+        else if (_rb.linearVelocity != Vector2.zero)
+        {
+            _rb.linearVelocity = Vector2.zero;
+        }
     }
 
     private bool CanMoveInDirection()
@@ -65,4 +92,9 @@ public class Player : MonoBehaviour
             return new Vector2(0, Mathf.Sign(input.y));
     }
 
+    public void Death()
+    {
+        _isDeath = true;
+        _rb.linearVelocity = Vector2.zero;
+    }
 }
