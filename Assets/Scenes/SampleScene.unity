@@ -17270,6 +17270,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &839463346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 839463347}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &839463347
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839463346}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &841474291
 GameObject:
   m_ObjectHideFlags: 0
@@ -21581,10 +21612,10 @@ MonoBehaviour:
   ghost: 3
   energyTime: 10
   blockSomeSwithingDirs: 5
-  _currentDirection: {x: 1, y: 0}
   _CanEatPacman: 1
   _ExitFrightened: 0
   _isDeath: 0
+  _currentDirection: {x: 1, y: 0}
 --- !u!1 &1084995236
 GameObject:
   m_ObjectHideFlags: 0
@@ -26425,10 +26456,10 @@ MonoBehaviour:
   ghost: 1
   energyTime: 10
   blockSomeSwithingDirs: 5
-  _currentDirection: {x: 1, y: 0}
   _CanEatPacman: 1
   _ExitFrightened: 0
   _isDeath: 0
+  _currentDirection: {x: 1, y: 0}
 --- !u!1 &1312620985
 GameObject:
   m_ObjectHideFlags: 0
@@ -30379,10 +30410,10 @@ MonoBehaviour:
   ghost: 0
   energyTime: 10
   blockSomeSwithingDirs: 5
-  _currentDirection: {x: 1, y: 0}
   _CanEatPacman: 1
   _ExitFrightened: 0
   _isDeath: 0
+  _currentDirection: {x: 1, y: 0}
 --- !u!58 &1515666919
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -31470,10 +31501,10 @@ MonoBehaviour:
   ghost: 2
   energyTime: 10
   blockSomeSwithingDirs: 5
-  _currentDirection: {x: 1, y: 0}
   _CanEatPacman: 1
   _ExitFrightened: 0
   _isDeath: 0
+  _currentDirection: {x: 1, y: 0}
 --- !u!1 &1578108239
 GameObject:
   m_ObjectHideFlags: 0
@@ -31833,6 +31864,7 @@ MonoBehaviour:
   _countOfCoins: 0
   _currentDirection: {x: 1, y: 0}
   _isDeath: 0
+  _isMoving: 1
 --- !u!50 &1587691663
 Rigidbody2D:
   serializedVersion: 5
@@ -45553,6 +45585,7 @@ SceneRoots:
   - {fileID: 615105344}
   - {fileID: 519420032}
   - {fileID: 619394802}
+  - {fileID: 839463347}
   - {fileID: 1587691661}
   - {fileID: 1546230150}
   - {fileID: 1222727937}

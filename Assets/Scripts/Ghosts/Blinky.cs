@@ -23,6 +23,9 @@ public class Blinky : MonoBehaviour
     [SerializeField] private int energyTime = 10;
     [SerializeField] private int blockSomeSwithingDirs = 5;
 
+    public bool _CanEatPacman = true;
+    public bool _ExitFrightened = false;
+    public bool _isDeath = false;
     public Vector2 _currentDirection = Vector2.right;
     private Vector2 _futureDirection = Vector2.zero;
     private readonly Vector2[] _dirs = { Vector2.right, Vector2.down, Vector2.left, Vector2.up };
@@ -32,13 +35,14 @@ public class Blinky : MonoBehaviour
     private bool _ChangeDirection = true;
     private int _Waves = 1;
     private float _ChasingTimer = -1f;
+    private float _ChaseDuration12 = 20f;
+    private float _ChaseDuration3 = 20f;
     private float _ScatterTimer = 0f;
+    private float _ScateDuration12 = 7f;
+    private float _ScateDuration3 = 5f;
+    private float _ScateDuration4 = 5f;
     private float _FrightenedTimer = 0f;
     private int _WaitForChoose = 0;
-    public bool _CanEatPacman = true;
-    public bool _ExitFrightened = false;
-    public bool _isDeath = false;
-
     private enum State
     {
         House,
@@ -54,6 +58,7 @@ public class Blinky : MonoBehaviour
         Inky,
         Pinky
     }
+
     private void Awake()
     {
         _currentState = startingState;
@@ -81,6 +86,20 @@ public class Blinky : MonoBehaviour
             }
         }
     }
+
+    public void SetGhostVelocity(float velocity)
+    {
+        movingSpeed = velocity;
+    }
+    public void SetGhostWavesTimer(float chaseDur12, float chaseDur3, float scateDur12, float scateDur3, float scateDur4)
+    {
+        _ChaseDuration12 = chaseDur12;
+        _ChaseDuration3 = chaseDur3;
+        _ScateDuration12 = scateDur12;
+        _ScateDuration3 = scateDur3;
+        _ScateDuration4 = scateDur4;
+    }
+
     private void StateHandler()
     {
         switch (_currentState)
@@ -371,6 +390,7 @@ public class Blinky : MonoBehaviour
     }
     private void UpdateWaves()
     {
+        if (_Waves == 5) return;
         _ChasingTimer = (_ChasingTimer != -1f) ? _ChasingTimer + Time.deltaTime : -1f;
         _ScatterTimer = (_ScatterTimer != -1f) ? _ScatterTimer + Time.deltaTime : -1f;
         if (_ChasingTimer == -1f)
@@ -381,7 +401,7 @@ public class Blinky : MonoBehaviour
         {
             if (!IsUnActiveState()) _currentState = State.Chasing;
         }
-        if (_Waves < 4 && _ChasingTimer >= 20f)
+        if (_Waves < 3 && _ChasingTimer >= _ChaseDuration12)
         {
             _Waves++;
             _ChasingTimer = -1f;
@@ -390,7 +410,16 @@ public class Blinky : MonoBehaviour
             _currentState = State.Scatter;
             _currentDirection = -_currentDirection;
         }
-        if (_Waves < 3 && _ScatterTimer >= 7f)
+        if (_Waves == 3 && _ChasingTimer >= _ChaseDuration3)
+        {
+            _Waves++;
+            _ChasingTimer = -1f;
+            _ScatterTimer = 0f;
+            if (IsUnActiveState()) return;
+            _currentState = State.Scatter;
+            _currentDirection = -_currentDirection;
+        }
+        if (_Waves < 3 && _ScatterTimer >= _ScateDuration12)
         {
             _ScatterTimer = -1f;
             _ChasingTimer = 0f;
@@ -398,13 +427,22 @@ public class Blinky : MonoBehaviour
             _currentState = State.Chasing;
             _currentDirection = -_currentDirection;
         }
-        if (_Waves < 5 && _ScatterTimer >= 5f)
+        if (_Waves == 3 && _ScatterTimer >= _ScateDuration3)
         {
             _ScatterTimer = -1f;
             _ChasingTimer = 0f;
             if (IsUnActiveState()) return;
             _currentState = State.Chasing;
             _currentDirection = -_currentDirection;
+        }
+        if (_Waves == 4 && _ScatterTimer >= _ScateDuration4)
+        {
+            _ScatterTimer = -1f;
+            _ChasingTimer = 0f;
+            if (IsUnActiveState()) return;
+            _currentState = State.Chasing;
+            _currentDirection = -_currentDirection;
+            _Waves++;
         }
     }
     private bool IsUnActiveState()
