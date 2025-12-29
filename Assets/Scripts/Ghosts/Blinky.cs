@@ -187,7 +187,7 @@ public class Blinky : MonoBehaviour
                 Vector2 testPosition = _rb.position + dir;
                 float distance = Vector2.Distance(testPosition, targetPosition);
 
-                //Debug.DrawLine(testPosition, targetPosition, new Color(1, 0, 0, 0.2f), 0.3f);
+                Debug.DrawLine(testPosition, targetPosition, new Color(1, 0, 0, 0.2f), 0.3f);
 
                 if (distance < bestDistance)
                 {
@@ -236,7 +236,7 @@ public class Blinky : MonoBehaviour
                 Vector2 testPosition = _rb.position + dir;
                 float distance = Vector2.Distance(testPosition, cellOfScary.position);
 
-                //Debug.DrawLine(testPosition, cellOfScary.position, new Color(1, 0, 0, 0.2f), 0.3f);
+                Debug.DrawLine(testPosition, cellOfScary.position, new Color(1, 0, 0, 0.2f), 0.3f);
 
                 if (distance < bestDistance)
                 {
@@ -316,7 +316,7 @@ public class Blinky : MonoBehaviour
                 Vector2 testPosition = _rb.position + dir;
                 float distance = Vector2.Distance(testPosition, new Vector2(0, 1));
 
-                //Debug.DrawLine(testPosition, new Vector2(0, 1), new Color(1, 0, 0, 0.2f), 0.3f);
+                Debug.DrawLine(testPosition, new Vector2(0, 1), new Color(1, 0, 0, 0.2f), 0.3f);
 
                 if (distance < bestDistance)
                 {
@@ -358,7 +358,7 @@ public class Blinky : MonoBehaviour
                     Vector2 testPosition = _rb.position + dir;
                     float distance = Vector2.Distance(testPosition, new Vector2(0f, 4.1f));
 
-                    //Debug.DrawLine(testPosition, new Vector2(0, 4), new Color(1, 0, 0, 0.2f), 0.3f);
+                    Debug.DrawLine(testPosition, new Vector2(0, 4), new Color(1, 0, 0, 0.2f), 0.3f);
 
                     if (distance < bestDistance)
                     {

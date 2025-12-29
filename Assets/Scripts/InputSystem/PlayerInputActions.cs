@@ -157,6 +157,89 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""8a76fa11-9b90-402f-91ba-bfbc218840e9"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""48e583f0-16b3-4df3-ab56-f43c5a06f768"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""869d501c-9f65-4468-8ecb-b7824272bd78"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""5b4ee777-c18a-4a77-8890-ae1a7206c6d2"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""d3603756-196b-4fca-a477-e6cb791fd26c"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                }
+            ]
+        },
+        {
+            ""name"": ""Reset"",
+            ""id"": ""1352c76b-3e87-4952-848e-49cfc99a5fcf"",
+            ""actions"": [
+                {
+                    ""name"": ""ResetKey"",
+                    ""type"": ""Value"",
+                    ""id"": ""1eff95fe-fe0b-42c2-845c-98f703ca1267"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""92ed45f9-712c-41ac-877a-f16b97bdd21f"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ResetKey"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -166,11 +249,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
+        // Reset
+        m_Reset = asset.FindActionMap("Reset", throwIfNotFound: true);
+        m_Reset_ResetKey = m_Reset.FindAction("ResetKey", throwIfNotFound: true);
     }
 
     ~@PlayerInputActions()
     {
         UnityEngine.Debug.Assert(!m_Player.enabled, "This will cause a leak and performance issues, PlayerInputActions.Player.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Reset.enabled, "This will cause a leak and performance issues, PlayerInputActions.Reset.Disable() has not been called.");
     }
 
     /// <summary>
@@ -338,6 +425,102 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     /// Provides a new <see cref="PlayerActions" /> instance referencing this action map.
     /// </summary>
     public PlayerActions @Player => new PlayerActions(this);
+
+    // Reset
+    private readonly InputActionMap m_Reset;
+    private List<IResetActions> m_ResetActionsCallbackInterfaces = new List<IResetActions>();
+    private readonly InputAction m_Reset_ResetKey;
+    /// <summary>
+    /// Provides access to input actions defined in input action map "Reset".
+    /// </summary>
+    public struct ResetActions
+    {
+        private @PlayerInputActions m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public ResetActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "Reset/ResetKey".
+        /// </summary>
+        public InputAction @ResetKey => m_Wrapper.m_Reset_ResetKey;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_Reset; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="ResetActions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(ResetActions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="ResetActions" />
+        public void AddCallbacks(IResetActions instance)
+        {
+            if (instance == null || m_Wrapper.m_ResetActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_ResetActionsCallbackInterfaces.Add(instance);
+            @ResetKey.started += instance.OnResetKey;
+            @ResetKey.performed += instance.OnResetKey;
+            @ResetKey.canceled += instance.OnResetKey;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="ResetActions" />
+        private void UnregisterCallbacks(IResetActions instance)
+        {
+            @ResetKey.started -= instance.OnResetKey;
+            @ResetKey.performed -= instance.OnResetKey;
+            @ResetKey.canceled -= instance.OnResetKey;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="ResetActions.UnregisterCallbacks(IResetActions)" />.
+        /// </summary>
+        /// <seealso cref="ResetActions.UnregisterCallbacks(IResetActions)" />
+        public void RemoveCallbacks(IResetActions instance)
+        {
+            if (m_Wrapper.m_ResetActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="ResetActions.AddCallbacks(IResetActions)" />
+        /// <seealso cref="ResetActions.RemoveCallbacks(IResetActions)" />
+        /// <seealso cref="ResetActions.UnregisterCallbacks(IResetActions)" />
+        public void SetCallbacks(IResetActions instance)
+        {
+            foreach (var item in m_Wrapper.m_ResetActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_ResetActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="ResetActions" /> instance referencing this action map.
+    /// </summary>
+    public ResetActions @Reset => new ResetActions(this);
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Player" which allows adding and removing callbacks.
     /// </summary>
@@ -352,5 +535,20 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMove(InputAction.CallbackContext context);
+    }
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Reset" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="ResetActions.AddCallbacks(IResetActions)" />
+    /// <seealso cref="ResetActions.RemoveCallbacks(IResetActions)" />
+    public interface IResetActions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "ResetKey" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnResetKey(InputAction.CallbackContext context);
     }
 }

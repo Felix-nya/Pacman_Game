@@ -7,6 +7,7 @@ public class InputSystem : MonoBehaviour
     public static InputSystem Instance { get; private set; }
 
     private PlayerInputActions _playerInputActions;
+    private PlayerInputActions _resetMap;
 
 
     private void Awake()
@@ -14,8 +15,16 @@ public class InputSystem : MonoBehaviour
         Instance = this;
 
         _playerInputActions = new PlayerInputActions();
+        _resetMap = new PlayerInputActions();
+        _resetMap.Enable();
         _playerInputActions.Enable();
 
+    }
+
+    public float GetReset()
+    {
+        float reset = _resetMap.Reset.ResetKey.ReadValue<float>();
+        return reset;
     }
 
     public Vector2 GetMovementVector()
@@ -24,9 +33,11 @@ public class InputSystem : MonoBehaviour
         return inputVector;
     }
 
-    public void DisableMovement()
-    {
-        _playerInputActions.Disable();
-    }
+    //public void DisableMovement()
+    //{
+    //    _playerInputActions.Disable();
+    //}
+
+
 
 }
