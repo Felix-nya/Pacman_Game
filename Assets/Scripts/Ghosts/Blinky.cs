@@ -42,6 +42,7 @@ public class Blinky : MonoBehaviour
     private float _ScateDuration3 = 5f;
     private float _ScateDuration4 = 5f;
     private float _FrightenedTimer = 0f;
+    private float _FrightenedMultiplayer = 0.6f;
     private int _WaitForChoose = 0;
     private enum State
     {
@@ -260,7 +261,7 @@ public class Blinky : MonoBehaviour
     {
         if (_WaitForChoose > 0)
         {
-            _rb.linearVelocity = _currentDirection * movingSpeed;
+            _rb.linearVelocity = _currentDirection * movingSpeed * _FrightenedMultiplayer;
             _WaitForChoose--;
             return;
         }
@@ -291,7 +292,7 @@ public class Blinky : MonoBehaviour
             _futureDirection = _currentDirection;
         }
         _currentDirection = _futureDirection;
-        _rb.linearVelocity = _currentDirection * movingSpeed;
+        _rb.linearVelocity = _currentDirection * movingSpeed * _FrightenedMultiplayer;
 
     }
     private void MovingToHouse()
@@ -385,8 +386,9 @@ public class Blinky : MonoBehaviour
         _pacmanCell.y = Mathf.Round(pacman.position.y);
         _ghostCell.x = Mathf.Round(ghostTransform.position.x * 2f) / 2f;
         _ghostCell.y = Mathf.Round(ghostTransform.position.y);
-        if (_pacmanCell == _ghostCell) return true;
-        return false;
+        float tolerance = 0.05f;
+        bool isCloseEnough = Mathf.Abs(_pacmanCell.x - _ghostCell.x) <= tolerance && Mathf.Abs(_pacmanCell.y - _ghostCell.y) <= tolerance;
+        return isCloseEnough;
     }
     private void UpdateWaves()
     {

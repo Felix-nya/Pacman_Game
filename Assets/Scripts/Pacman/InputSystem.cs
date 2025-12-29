@@ -21,6 +21,33 @@ public class InputSystem : MonoBehaviour
 
     }
 
+    private void OnDestroy()
+    {
+        CleanupInputActions();
+    }
+
+    private void OnApplicationQuit()
+    {
+        CleanupInputActions();
+    }
+
+    private void CleanupInputActions()
+    {
+        if (_playerInputActions != null)
+        {
+            _playerInputActions.Disable();
+            _playerInputActions.Dispose();
+            _playerInputActions = null;
+        }
+
+        if (_resetMap != null)
+        {
+            _resetMap.Disable();
+            _resetMap.Dispose();
+            _resetMap = null;
+        }
+    }
+
     public float GetReset()
     {
         float reset = _resetMap.Reset.ResetKey.ReadValue<float>();
@@ -32,12 +59,4 @@ public class InputSystem : MonoBehaviour
         Vector2 inputVector = _playerInputActions.Player.Move.ReadValue<Vector2>();
         return inputVector;
     }
-
-    //public void DisableMovement()
-    //{
-    //    _playerInputActions.Disable();
-    //}
-
-
-
 }
