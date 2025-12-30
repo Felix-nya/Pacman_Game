@@ -17314,6 +17314,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6200a5bee88084a8357d5e9504e85e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
+  blinky: {fileID: 1515666918}
+  pinky: {fileID: 1083034173}
+  inky: {fileID: 1576344370}
+  clyde: {fileID: 1309087410}
 --- !u!1 &841474291
 GameObject:
   m_ObjectHideFlags: 0

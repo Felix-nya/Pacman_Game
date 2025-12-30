@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     public static Player Instance { get; private set; }
 
-    [SerializeField] private float movingSpeed = 10.0f;
+    [SerializeField] public float movingSpeed = 10.0f;
     [SerializeField] private LayerMask wallLayer;
     [SerializeField] private float checkOffSet = 0.3f;
     [SerializeField] private float distanceToStop = 0.1f;
