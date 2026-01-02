@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +11,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Blinky inky;
     [SerializeField] private Blinky clyde;
 
+    [SerializeField] private TextMeshProUGUI scoreText;
+
+    private int _currentScore = 0;
     private int _currentLevel = 1;
     private readonly float _mainVelocity = 5f;
     private float _reset;
@@ -33,6 +37,7 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         InitializeLevel();
+        UpdateScoreUI();
     }
 
     private void Update()
@@ -57,6 +62,12 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    public void AddScore(int points)
+    {
+        _currentScore += points;
+        UpdateScoreUI();
+    }
+
     private void Reseting()
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
@@ -68,10 +79,17 @@ public class LevelManager : MonoBehaviour
         if (!_isLevelInitialized)
         {
             FindGhosts();
+            FindScore();
 
             SetterWithCurLevel();
             _isLevelInitialized = true;
         }
+    }
+
+    private void FindScore()
+    {
+        GameObject scoreObj = GameObject.Find("ScoreText");
+        if (scoreObj != null) scoreText = scoreObj.GetComponent<TextMeshProUGUI>();
     }
 
     private void FindGhosts()
@@ -159,4 +177,10 @@ public class LevelManager : MonoBehaviour
         _isLevelInitialized = false;
         Reseting();
     }
+
+    private void UpdateScoreUI()
+    {
+        scoreText.text = $"{_currentScore}";
+    }
+
 }

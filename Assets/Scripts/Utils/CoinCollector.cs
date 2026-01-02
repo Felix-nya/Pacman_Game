@@ -12,7 +12,7 @@ public class CoinCollector : MonoBehaviour
     private void CollectCoin(GameObject coin)
     {
         Player.Instance._countOfCoins++;
-        Debug.Log(Player.Instance._countOfCoins);
+        LevelManager.Instance.AddScore(10);
         Destroy(coin);
     }
 }
