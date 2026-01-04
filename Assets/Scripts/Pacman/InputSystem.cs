@@ -9,6 +9,7 @@ public class InputSystem : MonoBehaviour
     private PlayerInputActions _playerInputActions;
     private PlayerInputActions _resetMap;
 
+    public event EventHandler OnResetButton;
 
     private void Awake()
     {
@@ -18,7 +19,12 @@ public class InputSystem : MonoBehaviour
         _resetMap = new PlayerInputActions();
         _resetMap.Enable();
         _playerInputActions.Enable();
+        _resetMap.Reset.ResetKey.started += ResetKey_started;
+    }
 
+    private void ResetKey_started(InputAction.CallbackContext obj)
+    {
+        OnResetButton?.Invoke(this, EventArgs.Empty);
     }
 
     private void OnDestroy()
@@ -46,12 +52,6 @@ public class InputSystem : MonoBehaviour
             _resetMap.Dispose();
             _resetMap = null;
         }
-    }
-
-    public float GetReset()
-    {
-        float reset = _resetMap.Reset.ResetKey.ReadValue<float>();
-        return reset;
     }
 
     public Vector2 GetMovementVector()

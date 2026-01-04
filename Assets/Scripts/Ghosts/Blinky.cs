@@ -82,6 +82,10 @@ public class Blinky : MonoBehaviour
             }
             else
             {
+                if (!_isDeath)
+                {
+                    LevelManager.Instance.AddGhostScore();
+                }
                 _isDeath = true;
                 _currentState = State.Death;
             }
@@ -128,6 +132,7 @@ public class Blinky : MonoBehaviour
                     _ExitFrightened = false;
                     _CanEatPacman = true;
                     _currentState = State.Chasing;
+                    LevelManager.Instance.ResetGhostMulti();
                 }
                 break;
             case State.Death:

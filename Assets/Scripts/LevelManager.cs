@@ -13,12 +13,17 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI scoreText;
 
+    [SerializeField] private SpriteRenderer startingPan;
+
     private int _currentScore = 0;
     private int _currentLevel = 1;
     private readonly float _mainVelocity = 5f;
     private float _reset;
+    private int _ghostMulti = 1;
 
     private bool _isLevelInitialized = false;
+    private bool _isNextLevel = false;
+    private bool _isPause = true;
 
     private void Awake()
     {
@@ -36,27 +41,21 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        InputSystem.Instance.OnResetButton += Player_OnResetButton;
+
         InitializeLevel();
         UpdateScoreUI();
-    }
-
-    private void Update()
-    {
-        _reset = InputSystem.Instance.GetReset();
+        Time.timeScale = 0f;
+        _isPause = true;
+        startingPan.enabled = true;
     }
 
     private void FixedUpdate()
     {
-        if (_reset != 0)
-        {
-            _currentLevel++;
-            _isLevelInitialized = false;
-            Reseting();
-        }
-
         if (Player.Instance._countOfCoins == 240)
         {
             _currentLevel++;
+            _isNextLevel = true;
             _isLevelInitialized = false;
             Reseting();
         }
@@ -68,10 +67,31 @@ public class LevelManager : MonoBehaviour
         UpdateScoreUI();
     }
 
+    public void AddGhostScore()
+    {
+        _currentScore += 200 * _ghostMulti;
+        Debug.Log(200 * _ghostMulti);
+        _ghostMulti *= 2;
+        if (_ghostMulti > 16) 
+        {
+            _ghostMulti = 1;
+        }
+        UpdateScoreUI();
+    }
+
+    public void ResetGhostMulti()
+    {
+        _ghostMulti = 1;
+    }
+
     private void Reseting()
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName);
+        if (!_isNextLevel)
+        {
+            _currentScore = 0;
+        }
     }
 
     private void InitializeLevel()
@@ -90,8 +110,9 @@ public class LevelManager : MonoBehaviour
     {
         GameObject scoreObj = GameObject.Find("ScoreText");
         if (scoreObj != null) scoreText = scoreObj.GetComponent<TextMeshProUGUI>();
+        GameObject startPan = GameObject.Find("StartingPan");
+        if (scoreObj != null) startingPan = startPan.GetComponent<SpriteRenderer>();
     }
-
     private void FindGhosts()
     {
         GameObject blinkyObj = GameObject.Find("Blinky");
@@ -166,21 +187,40 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public int GetCurrentLevel()
+    private void TogglePause()
     {
-        return _currentLevel;
+        if (_isPause)
+        {
+            ResumeGame();
+        }
+        else
+        {
+            PauseGame();
+        }
     }
 
-    public void ResetToLevelOne()
+    private void PauseGame()
     {
-        _currentLevel = 1;
-        _isLevelInitialized = false;
-        Reseting();
+        _isPause = true;
+        Time.timeScale = 0f;
+        startingPan.enabled = true;
+    }
+
+    private void ResumeGame()
+    {
+        _isPause = false;
+        Time.timeScale = 1f;
+        startingPan.enabled = false;
     }
 
     private void UpdateScoreUI()
     {
         scoreText.text = $"{_currentScore}";
+    }
+
+    private void Player_OnResetButton(object sender, System.EventArgs e)
+    {
+        TogglePause();
     }
 
 }
