@@ -1,10 +1,14 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance { get; private set; }
+
+    [SerializeField] private Animator animator;
+    private static readonly int Victory = Animator.StringToHash(IsWin);
+    private const string IsWin = "IfWin";
 
     [SerializeField] private Blinky blinky;
     [SerializeField] private Blinky pinky;
@@ -12,30 +16,23 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Blinky clyde;
 
     [SerializeField] private TextMeshProUGUI scoreText;
-
     [SerializeField] private SpriteRenderer startingPan;
+
+    [SerializeField] private PrefabManager levelObjectManager;
 
     private int _currentScore = 0;
     private int _currentLevel = 1;
     private readonly float _mainVelocity = 5f;
-    private float _reset;
     private int _ghostMulti = 1;
 
-    private bool _isLevelInitialized = false;
-    private bool _isNextLevel = false;
     private bool _isPause = true;
+    private bool _isTransitioning = false;
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
         }
     }
 
@@ -43,22 +40,30 @@ public class LevelManager : MonoBehaviour
     {
         InputSystem.Instance.OnResetButton += Player_OnResetButton;
 
-        InitializeLevel();
         UpdateScoreUI();
         Time.timeScale = 0f;
         _isPause = true;
         startingPan.enabled = true;
+        SetterWithCurLevel();
     }
 
     private void FixedUpdate()
     {
-        if (Player.Instance._countOfCoins == 240)
+        if (!_isTransitioning && Player.Instance._countOfCoins == 240)
         {
+            _isTransitioning = true;
             _currentLevel++;
-            _isNextLevel = true;
-            _isLevelInitialized = false;
-            Reseting();
+            animator.SetBool(Victory, true);
+            StartCoroutine(TransitionToNextLevel());
         }
+    }
+
+    public void SetGhostReferences(Blinky newBlinky, Blinky newPinky, Blinky newInky, Blinky newClyde)
+    {
+        blinky = newBlinky;
+        pinky = newPinky;
+        inky = newInky;
+        clyde = newClyde;
     }
 
     public void AddScore(int points)
@@ -83,64 +88,7 @@ public class LevelManager : MonoBehaviour
     {
         _ghostMulti = 1;
     }
-
-    private void Reseting()
-    {
-        string currentSceneName = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(currentSceneName);
-        if (!_isNextLevel)
-        {
-            _currentScore = 0;
-        }
-    }
-
-    private void InitializeLevel()
-    {
-        if (!_isLevelInitialized)
-        {
-            FindGhosts();
-            FindScore();
-
-            SetterWithCurLevel();
-            _isLevelInitialized = true;
-        }
-    }
-
-    private void FindScore()
-    {
-        GameObject scoreObj = GameObject.Find("ScoreText");
-        if (scoreObj != null) scoreText = scoreObj.GetComponent<TextMeshProUGUI>();
-        GameObject startPan = GameObject.Find("StartingPan");
-        if (scoreObj != null) startingPan = startPan.GetComponent<SpriteRenderer>();
-    }
-    private void FindGhosts()
-    {
-        GameObject blinkyObj = GameObject.Find("Blinky");
-        GameObject pinkyObj = GameObject.Find("Pinky");
-        GameObject inkyObj = GameObject.Find("Inky");
-        GameObject clydeObj = GameObject.Find("Clyde");
-
-        if (blinkyObj != null) blinky = blinkyObj.GetComponent<Blinky>();
-        if (pinkyObj != null) pinky = pinkyObj.GetComponent<Blinky>();
-        if (inkyObj != null) inky = inkyObj.GetComponent<Blinky>();
-        if (clydeObj != null) clyde = clydeObj.GetComponent<Blinky>();
-    }
-
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        InitializeLevel();
-    }
-
+    
     private void SetterWithCurLevel()
     {
         if (_currentLevel == 1)
@@ -223,4 +171,33 @@ public class LevelManager : MonoBehaviour
         TogglePause();
     }
 
+    private IEnumerator TransitionToNextLevel()
+    {
+        Player.Instance.SetControlDisable();
+        levelObjectManager.ClearLevelObjects();
+        blinky.VanishThisGhost();
+        pinky.VanishThisGhost();
+        inky.VanishThisGhost();
+        clyde.VanishThisGhost();
+        yield return new WaitForSeconds(3f);
+        animator.SetBool(Victory, false);
+        yield return StartCoroutine(ClearAndGenerateLevel());
+        Player.Instance.SetControlEnable();
+        _isTransitioning = false;
+        PauseGame();
+    }
+
+    private IEnumerator ClearAndGenerateLevel()
+    {
+        blinky.ResetThisGhost();
+        pinky.ResetThisGhost();
+        inky.ResetThisGhost();
+        clyde.ResetThisGhost();
+        Player.Instance.ResetToStartPosition();
+        Player.Instance.ResetCoinCount();
+        levelObjectManager.GenerateLevelObjects();
+        SetterWithCurLevel();
+
+        yield return null;
+    }
 }

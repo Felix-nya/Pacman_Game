@@ -11,11 +11,13 @@ public class Player : MonoBehaviour
     [SerializeField] private float checkOffSet = 0.3f;
     [SerializeField] private float distanceToStop = 0.1f;
 
-    public int _countOfCoins = 0;
+    [SerializeField] public int _countOfCoins = 0;
     private Vector2 _inputVector;
     public Vector2 _currentDirection = Vector2.right;
     private Vector2 _nextDirection;
+    private Vector2 _startPosition;
     private Rigidbody2D _rb;
+    private bool _canMove = true;
     public bool _isDeath = false;
     public bool _isMoving = true;
 
@@ -23,18 +25,22 @@ public class Player : MonoBehaviour
     {
         Instance = this;
         _rb = GetComponent<Rigidbody2D>();
+        _startPosition = new Vector2(0, -8);
     }
 
     private void Update()
     {
         if (!_isDeath)
         {
-            _inputVector = InputSystem.Instance.GetMovementVector();
-            _inputVector = RoundToFourDirections(_inputVector);
-
-            if (_inputVector != Vector2.zero)
+            if (_canMove)
             {
-                _nextDirection = _inputVector;
+                _inputVector = InputSystem.Instance.GetMovementVector();
+                _inputVector = RoundToFourDirections(_inputVector);
+
+                if (_inputVector != Vector2.zero)
+                {
+                    _nextDirection = _inputVector;
+                }
             }
         }
     }
@@ -97,4 +103,32 @@ public class Player : MonoBehaviour
         _isDeath = true;
         _rb.linearVelocity = Vector2.zero;
     }
+
+    public void SetControlEnable()
+    {
+        _canMove = true;
+    }
+
+    public void SetControlDisable() 
+    { 
+        _canMove = false;
+        movingSpeed = 0f;
+    }
+
+    public void ResetToStartPosition()
+    {
+        transform.position = _startPosition;
+        transform.rotation = Quaternion.identity;
+    }
+
+    public void ResetCoinCount()
+    {
+        _countOfCoins = 0;
+    }
+
+    public CircleCollider2D getCol2D()
+    {
+        return GetComponent<CircleCollider2D>();
+    }
+
 }

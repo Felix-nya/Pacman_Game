@@ -22,6 +22,7 @@ public class Blinky : MonoBehaviour
     [SerializeField] private Ghosts ghost;
     [SerializeField] private int energyTime = 10;
     [SerializeField] private int blockSomeSwithingDirs = 5;
+    [SerializeField] private Vector2 _startPosition;
 
     public bool _CanEatPacman = true;
     public bool _ExitFrightened = false;
@@ -42,7 +43,7 @@ public class Blinky : MonoBehaviour
     private float _ScateDuration3 = 5f;
     private float _ScateDuration4 = 5f;
     private float _FrightenedTimer = 0f;
-    private float _FrightenedMultiplayer = 0.6f;
+    private readonly float _FrightenedMultiplayer = 0.6f;
     private int _WaitForChoose = 0;
     private enum State
     {
@@ -104,6 +105,36 @@ public class Blinky : MonoBehaviour
         _ScateDuration3 = scateDur3;
         _ScateDuration4 = scateDur4;
     }
+    public void ResetThisGhost()
+    {
+        _CanEatPacman = true;
+        _ExitFrightened = false;
+        _isDeath = false;
+        _currentDirection = Vector2.right;
+        _futureDirection = Vector2.zero;
+        _currentState = startingState;
+        _ChangeDirection = true;
+        _ChasingTimer = -1f;
+        _ScatterTimer = 0f;
+        _FrightenedTimer = 0f;
+        _Waves = 1;
+        transform.position = _startPosition;
+        transform.rotation = Quaternion.identity;
+        SpriteRenderer childSprite = GetComponentInChildren<SpriteRenderer>();
+        if (childSprite != null)
+        {
+            childSprite.enabled = true;
+        }
+    }
+    public void VanishThisGhost()
+    {
+        SpriteRenderer childSprite = GetComponentInChildren<SpriteRenderer>();
+        if (childSprite != null)
+        {
+            childSprite.enabled = false;
+        }
+        SetGhostVelocity(0f);
+    }
 
     private void StateHandler()
     {
@@ -132,7 +163,6 @@ public class Blinky : MonoBehaviour
                     _ExitFrightened = false;
                     _CanEatPacman = true;
                     _currentState = State.Chasing;
-                    LevelManager.Instance.ResetGhostMulti();
                 }
                 break;
             case State.Death:
