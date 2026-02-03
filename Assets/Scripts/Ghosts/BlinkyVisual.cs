@@ -39,6 +39,7 @@ public class BlinkyVisual : MonoBehaviour
 
     private void SettingAnimations()
     {
+        if (Player.Instance._countOfCoins == 240) animator.Play("Right"); 
         _curDirection = ghost._currentDirection;
         _isFrightened = !ghost._CanEatPacman;
         _isExitFrightenedVis = ghost._ExitFrightened;
@@ -92,7 +93,7 @@ public class BlinkyVisual : MonoBehaviour
                 animator.SetBool(Frightened, true);
                 animator.SetBool(ExitFrightened, false);
             }
-        }
+        } 
         else
         {
             animator.SetBool(ExitFrightened, false);

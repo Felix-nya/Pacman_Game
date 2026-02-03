@@ -1,7 +1,10 @@
+using System.Collections;
 using UnityEngine;
 
 public class PacmanVisual : MonoBehaviour
 {
+    [SerializeField] private SpriteRenderer spriteRenderer;
+
     private static readonly int Right = Animator.StringToHash(IsRight);
     private static readonly int Down = Animator.StringToHash(IsDown);
     private static readonly int Up = Animator.StringToHash(IsUp);
@@ -12,6 +15,7 @@ public class PacmanVisual : MonoBehaviour
     private Vector2 _curDirection;
     private bool _isDeath = false;
     private bool _isMoving = true;
+    private bool _isFlag = true;
 
     private const string IsRight = "IsRight";
     private const string IsDown = "IsDown";
@@ -27,14 +31,17 @@ public class PacmanVisual : MonoBehaviour
 
     private void Update()
     {
-        SettingAnimations();
-        if (!_isMoving && !_isDeath)
+        if (_isFlag)
         {
-            PauseAnimation();
-        }
-        else
-        {
-            ResumeAnimation();
+            SettingAnimations();
+            if (!_isMoving && !_isDeath)
+            {
+                PauseAnimation();
+            }
+            else
+            {
+                ResumeAnimation();
+            }
         }
     }
 
@@ -46,11 +53,9 @@ public class PacmanVisual : MonoBehaviour
 
         if (_isDeath)
         {
+            _isFlag = false;
             animator.SetBool(Death, true);
-        }
-        else
-        {
-            animator.SetBool(Death, false);
+            StartCoroutine(AfterDeath());
         }
 
         if (_curDirection == Vector2.right)
@@ -87,10 +92,21 @@ public class PacmanVisual : MonoBehaviour
     {
         animator.speed = 0f;
     }
-
     private void ResumeAnimation()
     {
         animator.speed = 1f;
     }
-
+    private IEnumerator AfterDeath()
+    {
+        yield return new WaitForSeconds(2.3f);
+        if (LevelManager.Instance._currentLifes != 0)
+        {
+            animator.SetBool(Death, false);
+            LevelManager.Instance.SetPhaseAfterDeath();
+            _isFlag = true;
+        } else
+        {
+            PauseAnimation();
+        }
+    }
 }

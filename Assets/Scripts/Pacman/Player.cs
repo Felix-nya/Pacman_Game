@@ -100,8 +100,10 @@ public class Player : MonoBehaviour
 
     public void Death()
     {
+        LevelManager.Instance.SetDeath();
         _isDeath = true;
         _rb.linearVelocity = Vector2.zero;
+        _nextDirection = Vector2.right;
     }
 
     public void SetControlEnable()

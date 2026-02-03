@@ -1,6 +1,8 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -17,9 +19,15 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private SpriteRenderer startingPan;
+    [SerializeField] private SpriteRenderer endPan;
 
     [SerializeField] private PrefabManager levelObjectManager;
 
+    [SerializeField] private Image life1;
+    [SerializeField] private Image life2;
+    [SerializeField] private Image life3;
+
+    public int _currentLifes;
     private int _currentScore = 0;
     private int _currentLevel = 1;
     private readonly float _mainVelocity = 5f;
@@ -35,18 +43,17 @@ public class LevelManager : MonoBehaviour
             Instance = this;
         }
     }
-
     private void Start()
     {
         InputSystem.Instance.OnResetButton += Player_OnResetButton;
-
+        _currentLifes = 4;
+        endPan.enabled = false;
         UpdateScoreUI();
         Time.timeScale = 0f;
         _isPause = true;
         startingPan.enabled = true;
         SetterWithCurLevel();
     }
-
     private void FixedUpdate()
     {
         if (!_isTransitioning && Player.Instance._countOfCoins == 240)
@@ -65,13 +72,11 @@ public class LevelManager : MonoBehaviour
         inky = newInky;
         clyde = newClyde;
     }
-
     public void AddScore(int points)
     {
         _currentScore += points;
         UpdateScoreUI();
     }
-
     public void AddGhostScore()
     {
         _currentScore += 200 * _ghostMulti;
@@ -83,12 +88,50 @@ public class LevelManager : MonoBehaviour
         }
         UpdateScoreUI();
     }
-
     public void ResetGhostMulti()
     {
         _ghostMulti = 1;
     }
-    
+    public void SetDeath()
+    {
+        if (_currentLifes == 4)
+        {
+            Debug.Log("1");
+            _currentLifes = 3;
+            life1.enabled = false;
+            StartCoroutine(ResetWithoutNextLevel());
+        } else if (_currentLifes == 3)
+        {
+            Debug.Log("2");
+            _currentLifes = 2;
+            life2.enabled = false;
+            StartCoroutine(ResetWithoutNextLevel());
+        } else if (_currentLifes == 2)
+        {
+            Debug.Log("3");
+            _currentLifes = 1;
+            life3.enabled = false;
+            StartCoroutine(ResetWithoutNextLevel());
+        } else
+        {
+            _currentLifes = 0;
+            Debug.Log("4");
+            endPan.enabled = true;
+            StartCoroutine(Lose());
+        }
+    }
+    public void SetPhaseAfterDeath()
+    {
+        blinky.ResetThisGhost();
+        pinky.ResetThisGhost();
+        inky.ResetThisGhost();
+        clyde.ResetThisGhost();
+        Player.Instance.ResetToStartPosition();
+        Player.Instance._isDeath = false;
+        SetterWithCurLevel();
+        Player.Instance.SetControlEnable();
+        PauseGame();
+    }
     private void SetterWithCurLevel()
     {
         if (_currentLevel == 1)
@@ -134,7 +177,6 @@ public class LevelManager : MonoBehaviour
             if (clyde != null) clyde.SetGhostWavesTimer(20f, 1037f, 5f, 5f, 0.015f);
         }
     }
-
     private void TogglePause()
     {
         if (_isPause)
@@ -146,32 +188,63 @@ public class LevelManager : MonoBehaviour
             PauseGame();
         }
     }
-
     private void PauseGame()
     {
         _isPause = true;
         Time.timeScale = 0f;
         startingPan.enabled = true;
     }
-
     private void ResumeGame()
     {
         _isPause = false;
         Time.timeScale = 1f;
         startingPan.enabled = false;
     }
-
     private void UpdateScoreUI()
     {
         scoreText.text = $"{_currentScore}";
     }
-
     private void Player_OnResetButton(object sender, System.EventArgs e)
     {
         TogglePause();
     }
-
     private IEnumerator TransitionToNextLevel()
+    {
+        Player.Instance.SetControlDisable();
+        levelObjectManager.ClearLevelObjects();//
+        blinky.VanishThisGhost();
+        pinky.VanishThisGhost();
+        inky.VanishThisGhost();
+        clyde.VanishThisGhost();
+        yield return new WaitForSeconds(3f);//
+        animator.SetBool(Victory, false);//
+        yield return StartCoroutine(ClearAndGenerateLevel());
+        Player.Instance.SetControlEnable();
+        _isTransitioning = false;//
+        PauseGame();
+    }
+    private IEnumerator ClearAndGenerateLevel()
+    {
+        blinky.ResetThisGhost();
+        pinky.ResetThisGhost();
+        inky.ResetThisGhost();
+        clyde.ResetThisGhost();
+        Player.Instance.ResetToStartPosition();
+        Player.Instance.ResetCoinCount();//
+        levelObjectManager.GenerateLevelObjects();//
+        SetterWithCurLevel();
+
+        yield return null;
+    }
+    private IEnumerator ResetWithoutNextLevel()
+    {
+        blinky.VanishThisGhost();
+        pinky.VanishThisGhost();
+        inky.VanishThisGhost();
+        clyde.VanishThisGhost();
+        yield return null;
+    }
+    private IEnumerator Lose()
     {
         Player.Instance.SetControlDisable();
         levelObjectManager.ClearLevelObjects();
@@ -180,24 +253,7 @@ public class LevelManager : MonoBehaviour
         inky.VanishThisGhost();
         clyde.VanishThisGhost();
         yield return new WaitForSeconds(3f);
-        animator.SetBool(Victory, false);
-        yield return StartCoroutine(ClearAndGenerateLevel());
-        Player.Instance.SetControlEnable();
-        _isTransitioning = false;
-        PauseGame();
-    }
-
-    private IEnumerator ClearAndGenerateLevel()
-    {
-        blinky.ResetThisGhost();
-        pinky.ResetThisGhost();
-        inky.ResetThisGhost();
-        clyde.ResetThisGhost();
-        Player.Instance.ResetToStartPosition();
-        Player.Instance.ResetCoinCount();
-        levelObjectManager.GenerateLevelObjects();
-        SetterWithCurLevel();
-
-        yield return null;
+        Debug.Log("gg");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }

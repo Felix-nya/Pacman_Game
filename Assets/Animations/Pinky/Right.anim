@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: RightInky
+  m_Name: Right
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,9 +21,9 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -195982287657632600, guid: 1db632fee78f21b4692d73747b734c6a, type: 3}
+      value: {fileID: 3060141491899686963, guid: 1db632fee78f21b4692d73747b734c6a, type: 3}
     - time: 0.2
-      value: {fileID: -6694456492612030201, guid: 1db632fee78f21b4692d73747b734c6a, type: 3}
+      value: {fileID: -8344641230721591866, guid: 1db632fee78f21b4692d73747b734c6a, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,8 +46,8 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -195982287657632600, guid: 1db632fee78f21b4692d73747b734c6a, type: 3}
-    - {fileID: -6694456492612030201, guid: 1db632fee78f21b4692d73747b734c6a, type: 3}
+    - {fileID: 3060141491899686963, guid: 1db632fee78f21b4692d73747b734c6a, type: 3}
+    - {fileID: -8344641230721591866, guid: 1db632fee78f21b4692d73747b734c6a, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

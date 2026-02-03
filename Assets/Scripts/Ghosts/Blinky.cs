@@ -45,6 +45,7 @@ public class Blinky : MonoBehaviour
     private float _FrightenedTimer = 0f;
     private readonly float _FrightenedMultiplayer = 0.6f;
     private int _WaitForChoose = 0;
+    private bool _ghostchasedpacman = false;
     private enum State
     {
         House,
@@ -75,11 +76,12 @@ public class Blinky : MonoBehaviour
     {
         UpdateWaves();
         StateHandler();
-        if (GhostChasePacman())
+        if (GhostChasePacman() && !_ghostchasedpacman)
         {
             if (_CanEatPacman)
             {
                 Player.Instance.Death();
+                _ghostchasedpacman = true;
             }
             else
             {
@@ -107,6 +109,7 @@ public class Blinky : MonoBehaviour
     }
     public void ResetThisGhost()
     {
+        _ghostchasedpacman = false;
         _CanEatPacman = true;
         _ExitFrightened = false;
         _isDeath = false;
