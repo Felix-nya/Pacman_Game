@@ -65,13 +65,7 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public void SetGhostReferences(Blinky newBlinky, Blinky newPinky, Blinky newInky, Blinky newClyde)
-    {
-        blinky = newBlinky;
-        pinky = newPinky;
-        inky = newInky;
-        clyde = newClyde;
-    }
+    
     public void AddScore(int points)
     {
         _currentScore += points;
@@ -177,6 +171,12 @@ public class LevelManager : MonoBehaviour
             if (clyde != null) clyde.SetGhostWavesTimer(20f, 1037f, 5f, 5f, 0.015f);
         }
     }
+
+    public int GetLevel()
+    {
+        return _currentLevel;
+    }
+
     private void TogglePause()
     {
         if (_isPause)
