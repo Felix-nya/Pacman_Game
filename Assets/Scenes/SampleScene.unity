@@ -265,7 +265,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &19712059
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -617,7 +616,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &26457763
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -768,7 +766,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &36292563
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -919,7 +916,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &38132024
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1291,7 +1287,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &51184404
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1571,7 +1566,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &101463187
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1722,7 +1716,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &104619847
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1873,7 +1866,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &105476118
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2102,7 +2094,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &111540948
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2381,7 +2372,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &147059328
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2532,7 +2522,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &154462366
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2683,7 +2672,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &160437355
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2834,7 +2822,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &177096212
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2985,7 +2972,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &185853711
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3243,7 +3229,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &193138405
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3394,7 +3379,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &198651013
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3545,7 +3529,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &199966749
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3818,7 +3801,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &202403991
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4059,7 +4041,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &211198826
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4210,7 +4191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &212591534
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4361,7 +4341,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &217498071
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4512,7 +4491,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &222512436
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4822,7 +4800,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &224216015
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4973,7 +4950,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &236569105
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5124,7 +5100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &237273092
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5275,7 +5250,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &259746903
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5547,7 +5521,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &274438928
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5798,7 +5771,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &300920512
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5949,7 +5921,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &313164982
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6100,7 +6071,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &316106175
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6251,7 +6221,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &316804581
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6402,7 +6371,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &319750975
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6553,7 +6521,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &323404834
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6704,7 +6671,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &334629825
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6855,7 +6821,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &337176834
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7125,7 +7090,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &338525962
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7276,7 +7240,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &360704217
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7427,7 +7390,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &363600412
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7583,7 +7545,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &377028978
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7734,7 +7695,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &378694822
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7885,7 +7845,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &381166257
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8036,7 +7995,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &382005124
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8187,7 +8145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &382239797
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8338,7 +8295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &390234766
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8489,7 +8445,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &391669597
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8640,7 +8595,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &394145414
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8791,7 +8745,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &401052872
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9042,7 +8995,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &405741503
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9193,7 +9145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &421316529
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9463,7 +9414,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &429868101
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9614,7 +9564,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &435481642
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9924,7 +9873,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &470967838
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10075,7 +10023,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &476451112
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10226,7 +10173,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &479114001
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10430,7 +10376,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &495368963
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10581,7 +10526,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &504251093
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11121,7 +11065,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &535452066
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11272,7 +11215,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &540331289
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11423,7 +11365,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &541554562
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11574,7 +11515,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &544139297
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11725,7 +11665,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &548300903
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12112,7 +12051,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &554135930
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12263,7 +12201,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &558619748
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12414,7 +12351,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &562046072
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12565,7 +12501,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &562812305
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12716,7 +12651,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &564040166
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13042,7 +12976,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &582612593
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13193,7 +13126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &584586669
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13644,7 +13576,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &624785982
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13933,7 +13864,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &639299132
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14084,7 +14014,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &641731910
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14235,7 +14164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &650332394
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14471,7 +14399,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e87bc3781a5a0f43992deb5f9a8826a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnergyCollector
-  EnergyEat: {fileID: 702935817}
 --- !u!61 &660025225
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14637,7 +14564,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &686082285
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14788,7 +14714,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &695047374
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15367,7 +15292,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &747629393
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15518,7 +15442,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &751888327
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15769,7 +15692,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &767734116
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15920,7 +15842,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &767898615
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16071,7 +15992,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &768455760
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16222,7 +16142,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &769083418
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16373,7 +16292,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &778182372
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16524,7 +16442,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &780949715
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16840,7 +16757,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &800953347
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17216,7 +17132,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &828073151
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17367,7 +17282,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &828604815
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17551,7 +17465,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &834444744
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17702,7 +17615,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &834805310
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17853,7 +17765,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &835509513
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18015,6 +17926,8 @@ MonoBehaviour:
   life1: {fileID: 793009681}
   life2: {fileID: 564460453}
   life3: {fileID: 929219320}
+  coinEat: {fileID: 62541414}
+  EnergyEat: {fileID: 702935817}
   _currentLifes: 3
 --- !u!1 &841474291
 GameObject:
@@ -18062,7 +17975,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &841474294
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18213,7 +18125,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &854513081
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18364,7 +18275,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &864206784
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18515,7 +18425,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &872757158
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18666,7 +18575,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &882622872
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18817,7 +18725,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &898967558
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18968,7 +18875,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &900083637
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19119,7 +19025,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &912355075
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19370,7 +19275,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &927008733
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19521,7 +19425,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &927405203
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19747,7 +19650,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &929642009
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19898,7 +19800,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &933457556
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20127,7 +20028,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &942105194
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20278,7 +20178,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &961842894
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20429,7 +20328,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &980488106
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20580,7 +20478,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &989449731
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20731,7 +20628,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &990322202
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20882,7 +20778,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &995520995
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21033,7 +20928,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &998579486
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21184,7 +21078,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1011431347
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21435,7 +21328,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1034817571
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21586,7 +21478,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1037574259
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21737,7 +21628,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1041175442
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21888,7 +21778,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1043891983
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22039,7 +21928,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1069374635
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22206,7 +22094,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1084995239
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22357,7 +22244,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1090201940
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22730,7 +22616,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1111848726
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22881,7 +22766,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1112138403
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23032,7 +22916,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1116806644
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23183,7 +23066,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1163176454
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23453,7 +23335,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1179959496
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23604,7 +23485,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1190687059
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23755,7 +23635,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1190866088
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23906,7 +23785,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1206679667
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24057,7 +23935,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1209901127
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24208,7 +24085,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1217645209
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24748,7 +24624,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1240356403
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24899,7 +24774,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1242764018
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25050,7 +24924,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1251039031
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25201,7 +25074,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1253370680
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25352,7 +25224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1260186968
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25503,7 +25374,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1260881254
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25732,7 +25602,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1270962061
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25883,7 +25752,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1278325253
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26034,7 +25902,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1279204862
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26185,7 +26052,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1285411447
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26336,7 +26202,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1298880114
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26487,7 +26352,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1303558836
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26638,7 +26502,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1308279135
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26789,7 +26652,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1309053977
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26956,7 +26818,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1312620988
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27107,7 +26968,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1319569686
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27358,7 +27218,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1330647998
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27609,7 +27468,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1342638221
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27760,7 +27618,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1353156635
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27911,7 +27768,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1353482327
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28062,7 +27918,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1370499840
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28213,7 +28068,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1371683611
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28443,7 +28297,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1394276906
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28594,7 +28447,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1395524028
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28745,7 +28597,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1403443838
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29047,7 +28898,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1414630012
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29198,7 +29048,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1415807911
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29349,7 +29198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1443787237
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29531,7 +29379,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1456915791
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29811,7 +29658,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1468641064
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29962,7 +29808,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1471464937
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30113,7 +29958,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1471973762
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30264,7 +30108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1472342056
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30415,7 +30258,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1481343175
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30566,7 +30408,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1490642588
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30717,7 +30558,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1494134235
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30868,7 +30708,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1501218726
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31019,7 +30858,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1512088338
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31482,7 +31320,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1516522856
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31633,7 +31470,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1540834192
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31784,7 +31620,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1540898376
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31935,7 +31770,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1541408970
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32130,7 +31964,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1565752672
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32453,7 +32286,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1578108242
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32604,7 +32436,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1578971238
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33033,7 +32864,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1601074299
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33284,7 +33114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1611063069
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33435,7 +33264,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1614292791
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33707,7 +33535,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1620568205
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33972,7 +33799,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e87bc3781a5a0f43992deb5f9a8826a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnergyCollector
-  EnergyEat: {fileID: 702935817}
 --- !u!61 &1637260795
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34138,7 +33964,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1638896599
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34289,7 +34114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1640244948
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34440,7 +34264,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1649051117
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34591,7 +34414,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1650977466
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34742,7 +34564,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1654882930
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34898,7 +34719,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1675682695
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35049,7 +34869,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1676030825
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35231,7 +35050,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1680897730
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35382,7 +35200,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1692098063
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35633,7 +35450,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1700313546
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36014,7 +35830,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1716325761
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36165,7 +35980,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1717106997
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36445,7 +36259,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1718939983
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36718,7 +36531,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1725189292
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36869,7 +36681,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1727566771
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37020,7 +36831,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1743329270
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37346,7 +37156,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e87bc3781a5a0f43992deb5f9a8826a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnergyCollector
-  EnergyEat: {fileID: 702935817}
 --- !u!61 &1758690655
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37512,7 +37321,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1758804314
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37776,7 +37584,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1782561754
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37927,7 +37734,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1789708114
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38078,7 +37884,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1801198803
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38229,7 +38034,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1812654879
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38380,7 +38184,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1814219582
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38531,7 +38334,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1814755742
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38682,7 +38484,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1821113764
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38833,7 +38634,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1822982251
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38984,7 +38784,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1832553880
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39135,7 +38934,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1833295071
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39286,7 +39084,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1836972630
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39437,7 +39234,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1843973346
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39707,7 +39503,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1851466305
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39858,7 +39653,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1852868809
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40009,7 +39803,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1854010208
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40282,7 +40075,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1856853571
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40433,7 +40225,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1859353653
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40797,7 +40588,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1872542767
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40948,7 +40738,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1891332410
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41099,7 +40888,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1896680052
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41250,7 +41038,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1897364058
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41401,7 +41188,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1913132476
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41552,7 +41338,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1916306697
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41703,7 +41488,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1919223841
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41854,7 +41638,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1924195936
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42005,7 +41788,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1932104581
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42156,7 +41938,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1936866212
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42307,7 +42088,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1945665584
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42458,7 +42238,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1965318105
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42701,7 +42480,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1974135493
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42852,7 +42630,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1986346796
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43003,7 +42780,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &1995889695
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43154,7 +42930,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &2007010122
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43797,7 +43572,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &2012230509
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43948,7 +43722,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &2021497998
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44099,7 +43872,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &2022327913
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44250,7 +44022,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &2022410119
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44602,7 +44373,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &2068921184
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44753,7 +44523,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &2069628621
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45025,7 +44794,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &2080357563
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45176,7 +44944,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &2087217538
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45327,7 +45094,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &2088348796
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45478,7 +45244,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &2097235876
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45629,7 +45394,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &2118028677
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45999,7 +45763,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &2130227174
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46150,7 +45913,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &2139803263
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46301,7 +46063,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &2141990826
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46452,7 +46213,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15db605302e09541ba2b219e7e5ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinEat: {fileID: 62541414}
 --- !u!61 &2143833820
 BoxCollider2D:
   m_ObjectHideFlags: 0

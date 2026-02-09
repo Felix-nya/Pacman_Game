@@ -28,6 +28,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Image life2;
     [SerializeField] private Image life3;
 
+    public AudioSource coinEat;
+    public AudioSource EnergyEat;
+
     public int _currentLifes;
     private int _currentScore = 0;
     private int _currentLevel = 1;
@@ -70,6 +73,7 @@ public class LevelManager : MonoBehaviour
     
     public void AddScore(int points)
     {
+        if (points == 10) coinEat.Play();
         _currentScore += points;
         UpdateScoreUI();
     }
@@ -86,6 +90,7 @@ public class LevelManager : MonoBehaviour
     }
     public void ResetGhostMulti()
     {
+        EnergyEat.Play();
         _ghostMulti = 1;
     }
     public void SetDeath()
