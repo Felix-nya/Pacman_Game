@@ -3,7 +3,7 @@ using UnityEngine;
 public class CoinCollector : MonoBehaviour
 {
     private CircleCollider2D circleCollider;
-
+    public AudioSource coinEat;
     private void Start()
     {
         circleCollider = Player.Instance.getCol2D();
@@ -16,6 +16,7 @@ public class CoinCollector : MonoBehaviour
 
     private void CollectCoin(GameObject coin)
     {
+        coinEat.Play();
         Player.Instance._countOfCoins++;
         LevelManager.Instance.AddScore(10);
         Destroy(coin);

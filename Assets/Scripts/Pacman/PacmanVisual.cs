@@ -23,6 +23,7 @@ public class PacmanVisual : MonoBehaviour
     private const string IsLeft = "IsLeft";
     private const string IsDeath = "IsDeath";
 
+    public AudioSource PacmanDied;
 
     private void Awake()
     {
@@ -98,6 +99,7 @@ public class PacmanVisual : MonoBehaviour
     }
     private IEnumerator AfterDeath()
     {
+        PacmanDied.Play();
         yield return new WaitForSeconds(2.3f);
         if (LevelManager.Instance._currentLifes != 0)
         {

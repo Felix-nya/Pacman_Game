@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 3926974365456336611}
   m_Layer: 10
   m_Name: Inky
-  m_TagString: Untagged
+  m_TagString: Ghosts
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,7 +154,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6728138655564339755}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -258,6 +258,8 @@ MonoBehaviour:
   ghost: 2
   energyTime: 10
   blockSomeSwithingDirs: 5
+  _startPosition: {x: -2, y: 1}
+  GhostDied: {fileID: 0}
   _CanEatPacman: 1
   _ExitFrightened: 0
   _isDeath: 0

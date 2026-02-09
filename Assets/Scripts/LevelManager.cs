@@ -18,6 +18,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Blinky clyde;
 
     [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI maxscoreText;
     [SerializeField] private SpriteRenderer startingPan;
     [SerializeField] private SpriteRenderer endPan;
 
@@ -53,6 +54,7 @@ public class LevelManager : MonoBehaviour
         _isPause = true;
         startingPan.enabled = true;
         SetterWithCurLevel();
+        maxscoreText.text = $"HIGH SCORE \n{PlayerPrefs.GetInt("Score")}";
     }
     private void FixedUpdate()
     {
@@ -204,6 +206,11 @@ public class LevelManager : MonoBehaviour
     {
         scoreText.text = $"{_currentScore}";
     }
+    private void UpdateMaxScoreUI()
+    {
+        maxscoreText.text = $"HIGH SCORE \n{_currentScore}";
+        PlayerPrefs.SetInt("Score", _currentScore);
+    }
     private void Player_OnResetButton(object sender, System.EventArgs e)
     {
         TogglePause();
@@ -246,6 +253,7 @@ public class LevelManager : MonoBehaviour
     }
     private IEnumerator Lose()
     {
+        if (_currentScore > PlayerPrefs.GetInt("Score")) UpdateMaxScoreUI();
         Player.Instance.SetControlDisable();
         levelObjectManager.ClearLevelObjects();
         blinky.VanishThisGhost();

@@ -5,6 +5,7 @@ public class EnergyCollector : MonoBehaviour
 {
     private CircleCollider2D circleCollider;
     public static event EventHandler OnEatingEnergy;
+    public AudioSource EnergyEat;
 
     private void Start()
     {
@@ -18,6 +19,7 @@ public class EnergyCollector : MonoBehaviour
 
     private void CollectEnergy(GameObject energy)
     {
+        EnergyEat.Play();
         Debug.Log("Ghost Hunt");
         LevelManager.Instance.ResetGhostMulti();
         OnEatingEnergy?.Invoke(this, EventArgs.Empty);

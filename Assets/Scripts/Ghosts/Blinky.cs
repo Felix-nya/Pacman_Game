@@ -24,6 +24,7 @@ public class Blinky : MonoBehaviour
     [SerializeField] private int blockSomeSwithingDirs = 5;
     [SerializeField] private Vector2 _startPosition;
 
+    public AudioSource GhostDied;
     public bool _CanEatPacman = true;
     public bool _ExitFrightened = false;
     public bool _isDeath = false;
@@ -87,6 +88,7 @@ public class Blinky : MonoBehaviour
             {
                 if (!_isDeath)
                 {
+                    GhostDied.Play();
                     LevelManager.Instance.AddGhostScore();
                 }
                 _isDeath = true;

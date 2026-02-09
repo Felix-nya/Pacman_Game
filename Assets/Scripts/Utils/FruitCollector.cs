@@ -11,6 +11,8 @@ public class FruitCollector : MonoBehaviour
     private int _level;
     private int _coins;
 
+    public AudioSource fruitEat;
+
     private void Awake()
     {
         if (_spriteRenderer == null) _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -58,6 +60,7 @@ public class FruitCollector : MonoBehaviour
 
     private void CollectFruit()
     {
+        fruitEat.Play();
         _spriteRenderer.enabled = false;
         _boxCollider.enabled = false;
         _level = LevelManager.Instance.GetLevel();
